@@ -9,6 +9,20 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        ae {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <12 13>;
+        };
+
+        oe {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <21 22>;
+        };
+    };
+ 
         keymap {
                 compatible = "zmk,keymap";
 
