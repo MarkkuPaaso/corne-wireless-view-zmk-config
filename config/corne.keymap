@@ -21,38 +21,44 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <21 22>;
         };
-    };
- 
-        keymap {
-                compatible = "zmk,keymap";
 
-                default_layer {
-                        label = "Base";
-                        bindings = <
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "Base";
+            bindings = <
 &trans  &kp Q  &kp W  &kp F             &kp P  &kp B        &kp J      &kp L  &kp U           &kp Y    &kp BACKSPACE  &trans
 &trans  &kp A  &kp R  &kp S             &kp T  &kp G        &kp M      &kp N  &kp E           &kp I    &kp O          &trans
 &trans  &kp Z  &kp X  &kp C             &kp D  &kp V        &kp K      &kp H  &kp COMMA       &kp DOT  &kp FSLH       &trans
                       &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_SHIFT
-                        >;
-                };
-                lower_layer {
-                        label = "Lower";
-                        bindings = <
-&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp SQT           &kp DLLR              &kp PERCENT              &kp N7  &kp N8  &kp N9  &kp STAR  &kp FSLH   &trans
-&trans  &kp AMPERSAND    &kp SLASH          &kp EQUAL         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  &trans
-&trans  &kp AT_SIGN      &kp BACKSLASH      &kp HASH          &trans                &trans                   &kp N1  &kp N2  &kp N3  &kp N0    &kp RET    &trans
-                                            &kp LEFT_CONTROL  &trans                &trans                   &trans  &trans  &kp LEFT_SHIFT
-                        >;
-                };
-
-                raise_layer {
-                        label = "Raise";
-                        bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans      &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &kp LBRC  &kp RBRC    &trans    &trans    &trans  &trans     &trans  &trans
-                        &kp LEFT_CONTROL  &trans    &trans      &trans    &trans    &kp LEFT_SHIFT
-                        >;
-                };
+            >;
         };
+
+        lower_layer {
+            label = "Lower";
+            bindings = <
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp SQT           &kp DLLR              &kp PERCENT              &kp N7  &kp N8  &kp N9           &kp ASTERISK  &kp FSLH    &trans
+&trans  &kp AMPERSAND    &kp SLASH          &kp EQUAL         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp N4  &kp N5  &kp N6           &kp PLUS      &kp MINUS   &trans
+&trans  &kp AT_SIGN      &kp BACKSLASH      &kp HASH          &trans                &trans                   &kp N1  &kp N2  &kp N3           &kp N0        &kp PERIOD  &trans
+                                            &kp LEFT_CONTROL  &trans                &trans                   &trans  &trans  &kp RIGHT_SHIFT
+            >;
+        };
+
+        raise_layer {
+            label = "Raise";
+            bindings = <
+&trans  &trans  &trans  &trans            &trans    &trans      &trans    &trans    &trans           &trans     &trans  &trans
+&trans  &trans  &trans  &trans            &kp LBKT  &kp RBKT    &kp LEFT  &kp DOWN  &kp UP           &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans            &kp LBRC  &kp RBRC    &trans    &trans    &trans           &trans     &trans  &trans
+                        &kp LEFT_CONTROL  &trans    &trans      &trans    &trans    &kp RIGHT_SHIFT
+            >;
+        };
+    };
 };
