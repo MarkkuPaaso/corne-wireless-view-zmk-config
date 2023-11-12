@@ -8,7 +8,7 @@
 
         combo_ae {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
@@ -20,12 +20,12 @@
 
         combo_tab {
             bindings = <&kp T>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0 1 2 3>;
         };
 
         combo_both_layer {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&mo 3>;
             key-positions = <37 40>;
         };
     };
@@ -73,3 +73,4 @@
         };
     };
 };
+
