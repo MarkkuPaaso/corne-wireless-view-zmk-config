@@ -6,26 +6,26 @@
     combos {
         compatible = "zmk,combos";
 
-        ae {
+        combo_ae {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <12 13>;
             layers = <0>;
         };
 
-        oe {
+        combo_oe {
             bindings = <&kp SEMICOLON>;
             key-positions = <21 22>;
             layers = <0>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        combo_tab {
+            bindings = <&kp T>;
             key-positions = <0 1>;
             layers = <0 1 2 3>;
         };
 
-        combo-layer {
-            bindings = <&mo 3>;
+        combo_both_layer {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <37 40>;
         };
     };
@@ -46,20 +46,20 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp SQT           &kp DLLR              &kp PERCENT              &kp N7  &kp N8  &kp N9           &kp PIPE   &kp AMPERSAND  &trans
-&trans  &kp AMPERSAND    &kp SLASH          &kp EQUAL         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp N4  &kp N5  &kp N6           &kp MINUS  &kp SLASH      &trans
-&trans  &kp AT_SIGN      &kp BACKSLASH      &kp HASH          &trans                &trans                   &kp N1  &kp N2  &kp N3           &kp N0     &kp PERIOD     &trans
-                                            &kp LEFT_CONTROL  &trans                &trans                   &trans  &kp N0  &kp RIGHT_SHIFT
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp SQT           &kp DLLR              &kp PERCENT              &kp PIPE   &kp N7  &kp N8           &kp N9  &kp AMPERSAND  &trans
+&trans  &kp AMPERSAND    &kp SLASH          &kp EQUAL         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS  &kp N4  &kp N5           &kp N6  &kp SLASH      &trans
+&trans  &kp AT_SIGN      &kp BACKSLASH      &kp HASH          &kp SEMICOLON         &kp SINGLE_QUOTE         &kp N0     &kp N1  &kp N2           &kp N3  &kp PERIOD     &trans
+                                            &kp LEFT_CONTROL  &trans                &trans                   &trans     &trans  &kp RIGHT_SHIFT
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans            &trans    &trans      &trans    &trans    &trans           &trans     &trans  &trans
-&trans  &trans  &trans  &trans            &kp LBKT  &kp RBKT    &kp LEFT  &kp DOWN  &kp UP           &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans            &kp LBRC  &kp RBRC    &trans    &trans    &trans           &trans     &trans  &trans
-                        &kp LEFT_CONTROL  &trans    &trans      &trans    &trans    &kp RIGHT_SHIFT
+&trans  &trans  &trans  &trans            &trans    &trans      &trans  &trans    &kp UP           &trans     &trans  &trans
+&trans  &trans  &trans  &trans            &kp LBKT  &kp RBKT    &trans  &kp LEFT  &kp DOWN         &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans            &kp LBRC  &kp RBRC    &trans  &trans    &trans           &trans     &trans  &trans
+                        &kp LEFT_CONTROL  &trans    &trans      &trans  &trans    &kp RIGHT_SHIFT
             >;
         };
 
