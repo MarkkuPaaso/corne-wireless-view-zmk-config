@@ -7,6 +7,7 @@
         macro_lthan: macro_lthan {
             label = "lesser_than";
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -19,6 +20,7 @@
         macro_gthan: macro_gthan {
             label = "greater_than";
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
