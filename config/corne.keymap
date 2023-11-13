@@ -78,20 +78,20 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)        &kp AT           &kp BSLH          &kp PIPE   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp AMPERSAND  &trans
-&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)        &kp EXCLAMATION  &kp UNDERSCORE    &kp MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp FSLH       &trans
-&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)        &macro_lthan     &macro_gthan      &kp N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD     &trans
-                                &kp LEFT_CONTROL  &trans           &trans            &trans     &trans     &kp KP_N0
+&trans  &trans  &trans  &trans            &trans  &trans    &kp PIPE   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp AMPERSAND  &trans
+&trans  &trans  &trans  &trans            &trans  &trans    &kp MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp FSLH       &trans
+&trans  &trans  &trans  &trans            &trans  &trans    &kp N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD     &trans
+                        &kp LEFT_CONTROL  &trans  &trans    &trans     &trans     &kp KP_N0
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &kp RS(N1)    &trans         &trans            &kp RA(N8)  &kp RA(N9)    &trans  &trans    &kp UP           &trans     &trans  &trans
-&trans  &kp RS(N1)    &kp RS(MINUS)  &trans            &kp RS(N8)  &kp RS(N9)    &trans  &kp LEFT  &kp DOWN         &kp RIGHT  &trans  &trans
-&trans  &macro_lthan  &macro_gthan   &trans            &kp RA(N7)  &kp RA(N0)    &trans  &trans    &trans           &trans     &trans  &trans
-                                     &kp LEFT_CONTROL  &trans      &trans        &trans  &trans    &kp RIGHT_SHIFT
+&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp AT           &kp BSLH          &kp LC(W)  &kp HOME     &kp PG_DN   &kp PG_UP  &kp END    &trans
+&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT  &trans
+&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans      &trans     &kp TAB    &trans
+                                &kp LCTRL   &kp LALT         &trans            &trans     &trans       &kp RSHIFT
             >;
         };
 
