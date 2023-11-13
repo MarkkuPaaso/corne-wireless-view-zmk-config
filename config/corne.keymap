@@ -75,27 +75,28 @@
             >;
         };
 
-        lower_layer {
+        layer_lower {
             label = "Lower";
             bindings = <
-&trans  &trans  &trans  &trans            &trans  &trans    &kp PIPE   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp AMPERSAND  &trans
-&trans  &trans  &trans  &trans            &trans  &trans    &kp MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp FSLH       &trans
-&trans  &trans  &trans  &trans            &trans  &trans    &kp N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD     &trans
-                        &kp LEFT_CONTROL  &trans  &trans    &trans     &trans     &kp KP_N0
+&trans  &trans  &trans  &trans     &trans  &trans    &kp KP_MULTIPLY  &kp N7  &kp N8      &kp N9  &kp BACKSPACE  &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &kp KP_PLUS      &kp N4  &kp N5      &kp N6  &kp KP_DIVIDE  &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &kp KP_MINUS     &kp N1  &kp N2      &kp N3  &kp ENTER      &trans
+                        &kp LCTRL  &trans  &trans    &trans           &kp N0  &kp KP_DOT
             >;
         };
 
-        raise_layer {
+        layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp AT           &kp BSLH          &kp LC(W)  &kp HOME     &kp PG_DN   &kp PG_UP  &kp END    &trans
-&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT  &trans
-&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans      &trans     &kp TAB    &trans
-                                &kp LCTRL   &kp LALT         &trans            &trans     &trans       &kp RSHIFT
+&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp AT           &kp BSLH          &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &trans
+&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp DOWN  &trans
+&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans     &trans     &kp TAB   &trans
+                                &kp LCTRL   &kp LALT         &trans            &trans     &trans       &trans
             >;
         };
 
         layer_3 {
+            label = "Controls"
             bindings = <
 &trans  &kp F1    &kp F2  &kp F3  &kp F4  &kp F5    &kp F6                &kp F7                &kp F8             &kp F9           &kp F10  &trans
 &trans  &trans    &trans  &trans  &trans  &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &trans
@@ -105,3 +106,4 @@
         };
     };
 };
+
