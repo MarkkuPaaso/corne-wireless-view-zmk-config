@@ -88,9 +88,9 @@
         layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp AT           &kp BSLH          &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &trans
-&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp DOWN  &trans
-&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans     &trans     &kp TAB   &trans
+&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp BSLH         &kp LS(N2)        &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans     &trans     &kp TAB    &trans
                                 &kp LCTRL   &kp LALT         &trans            &trans     &mo 2        &trans
             >;
         };
