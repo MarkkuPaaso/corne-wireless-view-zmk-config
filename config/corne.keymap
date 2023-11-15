@@ -45,9 +45,19 @@
             layers = <0>;
         };
 
+        combo_alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <37 38>;
+        };
+
+        combo_shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <2 3>;
+        };
+
         combo_tab {
             bindings = <&kp T>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
             layers = <0 1 2 3>;
         };
 
@@ -60,6 +70,7 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
+
     };
 
     keymap {
@@ -68,30 +79,30 @@
         layer_base {
             label = "Base";
             bindings = <
-&trans  &kp Q  &kp W  &kp F      &kp P  &kp B      &kp J      &kp L  &kp U       &kp Y       &kp BACKSPACE  &trans
-&trans  &kp A  &kp R  &kp S      &kp T  &kp G      &kp M      &kp N  &kp E       &kp I       &kp O          &trans
-&trans  &kp Z  &kp X  &kp C      &kp D  &kp V      &kp K      &kp H  &kp COMMA   &kp PERIOD  &kp BSLH       &trans
-                      &kp LCTRL  &mo 1  &kp SPACE  &kp ENTER  &mo 2  &kp RSHIFT  
+&trans  &kp Q  &kp W  &kp F      &kp P  &kp B        &kp J      &kp L  &kp U       &kp Y       &kp BACKSPACE  &trans
+&trans  &kp A  &kp R  &kp S      &kp T  &kp G        &kp M      &kp N  &kp E       &kp I       &kp O          &trans
+&trans  &kp Z  &kp X  &kp C      &kp D  &kp V        &kp K      &kp H  &kp COMMA   &kp PERIOD  &kp BSLH       &trans
+                      &kp LCTRL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RSHIFT
             >;
         };
 
         layer_lower {
             label = "Lower";
             bindings = <
-&trans  &kp LS(TAB)  &kp TAB  &trans    &trans  &trans  &kp KP_MULTIPLY  &kp N7  &kp N8      &kp N9  &kp BACKSPACE  &trans
-&trans  &trans       &trans   &trans    &trans  &trans  &kp KP_PLUS      &kp N4  &kp N5      &kp N6  &kp KP_DIVIDE  &trans
-&trans  &trans       &trans   &trans    &trans  &trans  &kp KP_MINUS     &kp N1  &kp N2      &kp N3  &kp ENTER      &trans
-                              &kp LALT  &mo 1   &trans  &trans           &kp N0  &kp KP_DOT  
+&trans  &kp LS(TAB)  &kp TAB  &trans    &trans  &trans    &kp KP_MULTIPLY  &kp N7  &kp N8      &kp N9  &kp DEL        &trans
+&trans  &trans       &trans   &trans    &trans  &trans    &kp KP_PLUS      &kp N4  &kp N5      &kp N6  &kp KP_DIVIDE  &trans
+&trans  &trans       &trans   &trans    &trans  &trans    &kp KP_MINUS     &kp N1  &kp N2      &kp N3  &kp ENTER      &trans
+                              &kp LALT  &mo 1   &trans    &trans           &kp N0  &kp KP_DOT
             >;
         };
 
         layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp BSLH         &kp LS(N2)       &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE   &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan     &trans     &kp LS(TAB)  &trans     &trans     &kp TAB    &trans
-                                &kp LALT    &kp LCTRL        &kp RSHIFT       &trans     &mo 2        &trans     
+&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp BSLH         &kp LS(N2)        &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans     &trans     &kp TAB    &trans
+                                &kp LALT    &kp LCTRL        &kp RSHIFT        &trans     &mo 2        &trans
             >;
         };
 
@@ -102,6 +113,15 @@
 &trans  &trans    &trans  &trans  &trans  &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &trans
 &trans  &kp LGUI  &trans  &trans  &trans  &trans    &kp K_BACK            &kp K_STOP            &kp K_PLAY_PAUSE   &kp K_FORWARD    &kp F12  &trans
                           &trans  &none   &trans    &trans                &none                 &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
