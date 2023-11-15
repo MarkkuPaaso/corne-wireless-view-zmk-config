@@ -72,6 +72,10 @@
             key-positions = <1 2>;
         };
 
+        combo_lgui {
+            bindings = <&kp LGUI>;
+            key-positions = <36 37>;
+        };
     };
 
     keymap {
@@ -116,6 +120,5 @@
                           &trans  &none   &trans    &trans                &none                 &trans
             >;
         };
-
     };
 };
