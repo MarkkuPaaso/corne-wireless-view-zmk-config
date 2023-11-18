@@ -3,9 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    macros {
-    };
-
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -64,10 +61,10 @@
         layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp LS(EQUAL)      &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)      &kp RA(RIGHT_BRACKET)  &kp HOME   &kp PG_DN  &kp PG_UP     &kp END     &trans
-&trans  &kp LS(N3)         &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE  &kp RPAR               &kp LEFT   &kp DOWN   &kp UP        &kp RIGHT   &trans
-&trans  &kp LS(BACKSLASH)  &kp RA(N7)  &kp RA(N0)  &kp 0x45         &kp LS(0x45)    &kp QMARK              &kp QMARK  &trans     &kp RA(0x45)  &kp LS(N2)  &trans
-                                       &kp LALT    &kp LCTRL        &kp RSHIFT      &kp LG(D)              &mo 2      &trans     
+&trans  &kp LS(EQUAL)      &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)           &kp RA(RIGHT_BRACKET)  &kp HOME   &kp PG_DN  &kp PG_UP            &kp END     &trans
+&trans  &kp LS(N3)         &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE       &kp RPAR               &kp LEFT   &kp DOWN   &kp UP               &kp RIGHT   &trans
+&trans  &kp LS(BACKSLASH)  &kp RA(N7)  &kp RA(N0)  &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp QMARK              &kp QMARK  &trans     &kp RA(NON_US_BSLH)  &kp LS(N2)  &trans
+                                       &kp LALT    &kp LCTRL        &kp RSHIFT           &kp LG(D)              &mo 2      &trans     
             >;
         };
         layer_controls {
