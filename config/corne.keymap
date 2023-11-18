@@ -90,13 +90,13 @@
         layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp LS(=)   &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)      &kp RA(])  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END     &trans
-&trans  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE  &kp RPAR   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &trans
-&trans  &kp LS(\)   &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan    &kp QMARK  &kp QMARK  &kp LS(,)  &kp LS(.)  &kp LS(N2)  &trans
-                                &kp LALT    &kp LCTRL        &kp RSHIFT      &kp LG(D)  &mo 2      &trans     
+&trans  &kp LS(=)   &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)      &kp RA(])  &kp HOME   &kp PG_DN      &kp PG_UP       &kp END     &trans
+&trans  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE  &kp RPAR   &kp LEFT   &kp DOWN       &kp UP          &kp RIGHT   &trans
+&trans  &kp LS(\)   &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan    &kp QMARK  &kp QMARK  &kp LS(COMMA)  &kp LS(PERIOD)  &kp LS(N2)  &trans
+                                &kp LALT    &kp LCTRL        &kp RSHIFT      &kp LG(D)  &mo 2      &trans         
             >;
         };
-        layer_both {
+        layer_controls {
             label = "Controls";
             bindings = <
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7        &kp F8             &kp F9           &kp F10  &trans
