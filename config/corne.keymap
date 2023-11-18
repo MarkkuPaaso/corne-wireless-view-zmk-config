@@ -5,10 +5,11 @@
 / {
     macros {
         macro_lthan: macro_lthan {
-            label = "lesser_than";
+            label = "less_than";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&kp LOCKING_NUM>,
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
@@ -21,6 +22,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&kp LOCKING_NUM>,
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
@@ -32,92 +34,75 @@
 
     combos {
         compatible = "zmk,combos";
-
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <3 4>;
+        };
+        combo_shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <2 3>;
+        };
+        combo_alt {
+            bindings = <&kp LALT>;
+            key-positions = <37 38>;
+            layers = <0>;
+        };
         combo_ae {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <13 14>;
             layers = <0>;
         };
-
         combo_oe {
             bindings = <&kp SEMICOLON>;
             key-positions = <21 22>;
             layers = <0>;
         };
-
-        combo_alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <37 38>;
-            layers = <0>;
-        };
-
-        combo_shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <2 3>;
-        };
-
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <3 4>;
-            layers = <0 1 2 3>;
-        };
-
-        combo_both_layer {
+        combo_mo_layer_3 {
             bindings = <&mo 3>;
             key-positions = <37 40>;
-        };
-
-        combo_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-        };
-
-        combo_lgui {
-            bindings = <&kp LGUI>;
-            key-positions = <36 37>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
         layer_base {
             label = "Base";
             bindings = <
-&trans  &kp Q  &kp W  &kp F      &kp P  &kp B        &kp J      &kp L  &kp U       &kp Y       &kp BACKSPACE  &trans
-&trans  &kp A  &kp R  &kp S      &kp T  &kp G        &kp M      &kp N  &kp E       &kp I       &kp O          &trans
-&trans  &kp Z  &kp X  &kp C      &kp D  &kp V        &kp K      &kp H  &kp COMMA   &kp PERIOD  &kp BSLH       &trans
-                      &kp LCTRL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RSHIFT
+&trans  &kp Q  &kp W  &kp F      &kp P  &kp B      &kp J      &kp L  &kp U       &kp Y       &kp BACKSPACE  &trans
+&trans  &kp A  &kp R  &kp S      &kp T  &kp G      &kp M      &kp N  &kp E       &kp I       &kp O          &trans
+&trans  &kp Z  &kp X  &kp C      &kp D  &kp V      &kp K      &kp H  &kp COMMA   &kp PERIOD  &kp BSLH       &trans
+                      &kp LCTRL  &mo 1  &kp SPACE  &kp ENTER  &mo 2  &kp RSHIFT  
             >;
         };
-
         layer_lower {
             label = "Lower";
             bindings = <
-&trans  &kp LS(TAB)  &kp TAB  &trans    &trans  &trans    &kp KP_MULTIPLY  &kp N7  &kp N8      &kp N9  &kp DEL        &trans
-&trans  &trans       &trans   &trans    &trans  &trans    &kp KP_PLUS      &kp N4  &kp N5      &kp N6  &kp KP_DIVIDE  &trans
-&trans  &trans       &trans   &trans    &trans  &trans    &kp KP_MINUS     &kp N1  &kp N2      &kp N3  &kp ENTER      &trans
-                              &kp LALT  &mo 1   &trans    &trans           &kp N0  &kp KP_DOT
+&trans  &trans   &trans  &trans    &trans  &trans  &kp KP_MULTIPLY  &kp N7  &kp N8      &kp N9  &kp DEL        &trans
+&trans  &kp TAB  &trans  &trans    &trans  &trans  &kp KP_PLUS      &kp N4  &kp N5      &kp N6  &kp KP_DIVIDE  &trans
+&trans  &trans   &trans  &trans    &trans  &trans  &kp KP_MINUS     &kp N1  &kp N2      &kp N3  &kp ENTER      &trans
+                         &kp LALT  &mo 1   &trans  &trans           &kp N0  &kp KP_DOT  
             >;
         };
-
         layer_raise {
             label = "Raise";
             bindings = <
-&trans  &kp RA(N2)  &kp RA(N8)  &kp RA(N9)  &kp BSLH         &kp LS(N2)        &kp LC(W)  &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &kp RA(N4)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE    &kp LG(D)  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &kp LS(N3)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan      &trans     &kp LS(TAB)  &trans     &trans     &kp TAB    &trans
-                                &kp LALT    &kp LCTRL        &kp RSHIFT        &trans     &mo 2        &trans
+&trans  &kp LS(=)   &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)      &kp RA(])  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END     &trans
+&trans  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE  &kp RPAR   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &trans
+&trans  &kp LS(\)   &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan    &kp QMARK  &kp QMARK  &kp LS(,)  &kp LS(.)  &kp LS(N2)  &trans
+                                &kp LALT    &kp LCTRL        &kp RSHIFT      &kp LG(D)  &mo 2      &trans     
             >;
         };
-
-        layer_controls {
+        layer_both {
             label = "Controls";
             bindings = <
-&trans  &kp F1    &kp F2  &kp F3  &kp F4  &kp F5    &kp F6                &kp F7                &kp F8             &kp F9           &kp F10  &trans
-&trans  &trans    &trans  &trans  &trans  &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &trans
-&trans  &kp LGUI  &trans  &trans  &trans  &trans    &kp K_BACK            &kp K_STOP            &kp K_PLAY_PAUSE   &kp K_FORWARD    &kp F12  &trans
-                          &trans  &none   &trans    &trans                &none                 &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7        &kp F8             &kp F9           &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_RW      &kp C_STOP    &kp C_PP           &kp C_FF         &kp F12  &trans
+                        &trans  &trans  &trans  &trans        &trans        &trans             
             >;
         };
     };
