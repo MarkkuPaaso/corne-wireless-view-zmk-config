@@ -105,7 +105,7 @@
             bindings = <
 &trans  &kp LS(EQUAL)      &kp RA(N8)  &kp RA(N9)  &kp RA(N2)       &kp RA(N4)      &kp RA(RIGHT_BRACKET)  &kp HOME   &kp PG_DN  &kp PG_UP    &kp END     &trans
 &trans  &kp LS(N3)         &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp UNDERSCORE  &kp RPAR               &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT   &trans
-&trans  &kp LS(BACKSLASH)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan    &kp QMARK              &kp QMARK  &trans     &macro_pipe  &kp LS(N2)  &trans
+&trans  &kp LS(BACKSLASH)  &kp RA(N7)  &kp RA(N0)  &macro_lthan     &macro_gthan    &kp QMARK              &kp QMARK  0x04       &macro_pipe  &kp LS(N2)  &trans
                                        &kp LALT    &kp LCTRL        &kp RSHIFT      &kp LG(D)              &mo 2      &trans     
             >;
         };
