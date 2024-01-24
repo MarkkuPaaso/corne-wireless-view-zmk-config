@@ -10,14 +10,24 @@
             bindings = <&kp ESC>;
             key-positions = <1 2>;
         };
-        combo_ae {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <21 22>;
+        combo_lshift0 {
+            bindings = <&kp LSHIFT>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+        combo_lshift1 {
+            bindings = <&kp LSHIFT>;
+            key-positions = <19 20>;
             layers = <0>;
         };
         combo_oe {
             bindings = <&kp SEMICOLON>;
             key-positions = <20 21>;
+            layers = <0>;
+        };
+        combo_ae {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <21 22>;
             layers = <0>;
         };
         combo_windows_nappi {
