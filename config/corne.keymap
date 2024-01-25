@@ -7,76 +7,120 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            bindings = <&kp ESC>;
+            timeout-ms = <50>;
             key-positions = <1 2>;
+            bindings = <&kp ESC>;
         };
-        combo_lshift0 {
-            bindings = <&kp LSHIFT>;
+        combo_lshift {
+            timeout-ms = <30>;
             key-positions = <15 16>;
-            layers = <0>;
-        };
-        combo_lshift1 {
             bindings = <&kp LSHIFT>;
-            key-positions = <19 20>;
-            layers = <0>;
+            layers = <0 1 2>;
+        };
+        combo_lctrl {
+            timeout-ms = <30>;
+            key-positions = <15 28>;
+            bindings = <&kp LCTRL>;
+            layers = <0 1 2>;
+        };
+        combo_lalt {
+            timeout-ms = <30>;
+            key-positions = <15 17>;
+            bindings = <&kp LALT>;
+            layers = <0 1 2>;
+        };
+        combo_laltgr {
+            timeout-ms = <30>;
+            key-positions = <15 29>;
+            bindings = <&kp LALT>;
+            layers = <0 1 2>;
+        };
+        combo_rshift {
+            timeout-ms = <30>;
+            key-positions = <20 19>;
+            bindings = <&kp LSHIFT>;
+            layers = <0 1 2>;
+        };
+        combo_rctrl {
+            timeout-ms = <30>;
+            key-positions = <20 31>;
+            bindings = <&kp LCTRL>;
+            layers = <0 1 2>;
+        };
+        combo_ralt {
+            timeout-ms = <30>;
+            key-positions = <20 18>;
+            bindings = <&kp LALT>;
+            layers = <0 1 2>;
+        };
+        combo_raltgr {
+            timeout-ms = <30>;
+            key-positions = <20 30>;
+            bindings = <&kp LALT>;
+            layers = <0 1 2>;
         };
         combo_oe {
-            bindings = <&kp SEMICOLON>;
+            timeout-ms = <50>;
             key-positions = <20 21>;
+            bindings = <&kp SEMICOLON>;
             layers = <0>;
         };
         combo_ae {
-            bindings = <&kp SINGLE_QUOTE>;
+            timeout-ms = <50>;
             key-positions = <21 22>;
+            bindings = <&kp SINGLE_QUOTE>;
             layers = <0>;
         };
         combo_windows_nappi {
-            bindings = <&kp LGUI>;
+            timeout-ms = <50>;
             key-positions = <25 26>;
+            bindings = <&kp LGUI>;
             layers = <0>;
         };
         combo_clear_bt_profile {
-            bindings = <&bt BT_CLR>;
+            timeout-ms = <50>;
             key-positions = <37 40>;
+            bindings = <&bt BT_CLR>;
             layers = <3>;
         };
         combo_mo_layer_3 {
-            bindings = <&mo 3>;
+            timeout-ms = <50>;
             key-positions = <36 41>;
+            bindings = <&mo 3>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-        layer_base {
-            label = "Base";
+        L0 {
+            label = "Layer_0";
             bindings = <
 &none  &kp Q  &kp W  &kp F      &kp P  &kp B      &kp J      &kp L  &kp U       &kp Y       &kp BACKSPACE  &none
 &none  &kp A  &kp R  &kp S      &kp T  &kp G      &kp M      &kp N  &kp E       &kp I       &kp O          &none
 &none  &kp Z  &kp X  &kp C      &kp D  &kp V      &kp K      &kp H  &kp COMMA   &kp PERIOD  &kp BSLH       &none
-                     &kp LCTRL  &mo 2  &kp SPACE  &kp ENTER  &mo 1  &kp LSHIFT
+                     &kp LCTRL  &mo 1  &kp SPACE  &kp ENTER  &mo 2  &kp LSHIFT
             >;
         };
-        layer_lower {
-            label = "Lower";
+        L1 {
+            label = "Layer_1";
+            bindings = <
+&none  &none         &none       &none      &none       &none      &none      &none       &none       &none       &kp DEL     &none
+&none  &kp N1        &kp N2      &kp N3     &kp N4      &kp N5     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0      &none
+&none  &kp LS(BSLH)  &kp RA(N2)  &kp RA(3)  &kp RA(N4)  &kp RA(E)  &none      &kp RA(N7)  &kp RA(N8)  &kp RA(N9)  &kp RA(N0)  &none
+                                 &kp LCTRL  &none       &kp LALT   &kp LG(D)  &none       &none     
+            >;
+        };
+        L2 {
+            label = "Layer_2";
             bindings = <
 &none  &none  &none  &none       &none      &none     &none         &kp HOME     &kp PG_DN     &kp PG_UP        &kp END        &none
 &none  &none  &none  &none       &none      &none     &kp KP_PLUS   &kp LEFT     &kp DOWN      &kp UP           &kp RIGHT      &none
 &none  &none  &none  &none       &none      &none     &kp KP_MINUS  &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &none
-                     &kp LSHIFT  &kp LCTRL  &kp LALT  &kp RALT      &mo 1        &kp KP_DOT  
+                     &kp LSHIFT  &kp LCTRL  &kp LALT  &kp RALT      &none        &kp KP_DOT  
             >;
         };
-        layer_raise {
-            label = "Raise";
-            bindings = <
-&none  &kp EXCLAMATION  &kp LS(N2)  &kp LS(N3)  &kp LS(4)   &kp LS(N5)  &kp LS(N6)  &kp KP_DIVIDE  &kp LS(N8)  &kp LS(N9)  &kp RPAR    &none
-&none  &kp N1           &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7         &kp N8      &kp N9      &kp N0      &none
-&none  &kp LS(BSLH)     &kp RA(N2)  &kp RA(3)   &kp RA(N4)  &kp RA(E)   &none       &kp RA(N7)     &kp RA(N8)  &kp RA(N9)  &kp RA(N0)  &none
-                                    &kp LCTRL   &kp LSHIFT  &kp LALT    &kp LG(D)   &mo 2          &none     
-            >;
-        };
-        layer_controls {
-            label = "Controls";
+        L3 {
+            label = "Layer_3";
             bindings = <
 &none  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5  &kp F6        &kp F7          &kp F8             &kp F9           &kp F10  &none
 &none  &none   &none   &none   &none       &none   &kp C_BRI_DN  &kp C_BRI_UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &none
