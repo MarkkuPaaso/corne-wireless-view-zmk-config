@@ -11,6 +11,18 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
+        combo_shift_tab {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp LS(TAB)>;
+            layers = <0>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp TAB>;
+            layers = <0>;
+        };
         combo_lshift {
             timeout-ms = <30>;
             key-positions = <15 16>;
@@ -25,19 +37,19 @@
         };
         combo_lalt {
             timeout-ms = <30>;
-            key-positions = <15 17>;
+            key-positions = <3 16>;
             bindings = <&kp LALT>;
             layers = <0 1 2>;
         };
         combo_laltgr {
             timeout-ms = <30>;
-            key-positions = <15 29>;
-            bindings = <&kp LALT>;
+            key-positions = <15 17>;
+            bindings = <&kp RALT>;
             layers = <0 1 2>;
         };
         combo_rshift {
             timeout-ms = <30>;
-            key-positions = <20 19>;
+            key-positions = <19 20>;
             bindings = <&kp LSHIFT>;
             layers = <0 1 2>;
         };
@@ -49,14 +61,14 @@
         };
         combo_ralt {
             timeout-ms = <30>;
-            key-positions = <20 18>;
+            key-positions = <8 19>;
             bindings = <&kp LALT>;
             layers = <0 1 2>;
         };
         combo_raltgr {
             timeout-ms = <30>;
-            key-positions = <20 30>;
-            bindings = <&kp LALT>;
+            key-positions = <18 20>;
+            bindings = <&kp RALT>;
             layers = <0 1 2>;
         };
         combo_oe {
