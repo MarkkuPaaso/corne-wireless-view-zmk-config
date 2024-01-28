@@ -7,7 +7,7 @@
         lpht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -16,7 +16,7 @@
         lpht_ctrl: left_positional_hold_tap_ctrl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -25,7 +25,7 @@
         lpht_alt: left_positional_hold_tap_alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -34,7 +34,7 @@
         lpht_gui: left_positional_hold_tap_gui {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -43,7 +43,7 @@
         rpht: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
