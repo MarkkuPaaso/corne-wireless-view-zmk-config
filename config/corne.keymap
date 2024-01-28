@@ -109,10 +109,10 @@
         L2 {
             label = "Layer_2";
             bindings = <
-&none  &none           &none               &none         &none         &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP      &kp END     &none
-&none  &lpht LSHIFT -  &lpht_ctrl LCTRL _  &lpht LGUI X  &lpht LALT X  &none  &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT   &none
-&none  &none           &none               &none         &none         &none  &none  &none     &none      &kp LS(EQUAL)  &kp LS(N2)  &none
-                                           &none         &none         &none  &none  &none     &none    
+&none  &none                  &none                   &none         &none         &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP      &kp END     &none
+&none  &lpht LSHIFT KP_MINUS  &lpht_ctrl LCTRL QMARK  &lpht LGUI X  &lpht LALT X  &none  &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT   &none
+&none  &none                  &none                   &none         &none         &none  &none  &none     &none      &kp LS(EQUAL)  &kp LS(N2)  &none
+                                                      &none         &none         &none  &none  &none     &none    
             >;
         };
         L3 {
