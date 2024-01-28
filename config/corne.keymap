@@ -89,7 +89,7 @@
             label = "Layer_0";
             bindings = <
 &none  &kp Q           &kp W               &kp F         &kp P         &kp B      &kp J      &kp L         &kp U         &kp Y          &kp BACKSPACE   &none
-&none  &lpht A LSHIFT  &lpht_ctrl R LCTRL  &lpht S LGUI  &lpht T LALT  &kp G      &kp M      &rpht N LALT  &rpht E LGUI  &rpht I LCTRL  &rpht O LSHIFT  &none
+&none  &kp A  &kp R  &kp S   &kp T   &kp G      &kp M      &kp N  &kp E  &kp I  &kp O   &none
 &none  &kp Z           &kp X               &kp C         &kp D         &kp V      &kp K      &kp H         &kp COMMA     &kp PERIOD     &kp BSLH        &none
                                            &kp LCTRL     &mo 1         &kp SPACE  &kp ENTER  &mo 2         &kp LSHIFT  
             >;
