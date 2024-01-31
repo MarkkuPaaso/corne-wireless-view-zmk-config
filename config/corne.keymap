@@ -91,13 +91,13 @@
             bindings = <&mo 3>;
             layers = <0>;
         };
-        combo_lbracket {
+        combo_home {
             timeout-ms = <80>;
             key-positions = <7 8>;
             bindings = <&kp HOME>;
             layers = <1>;
         };
-        combo_rbracket {
+        combo_end {
             timeout-ms = <80>;
             key-positions = <9 10>;
             bindings = <&kp END>;
