@@ -49,6 +49,24 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
+        combo_emark {
+            timeout-ms = <30>;
+            key-positions = <7 8>;
+            bindings = <&kp EXCLAMATION>;
+            layers = <0>;
+        };
+        combo_qmark {
+            timeout-ms = <30>;
+            key-positions = <8 9>;
+            bindings = <&kp UNDERSCORE>;
+            layers = <0>;
+        };
+        combo_delete {
+            timeout-ms = <30>;
+            key-positions = <9 10>;
+            bindings = <&kp DEL>;
+            layers = <0>;
+        };
         combo_tab {
             timeout-ms = <40>;
             key-positions = <16 17>;
@@ -67,40 +85,41 @@
             bindings = <&kp SINGLE_QUOTE>;
             layers = <0>;
         };
-        combo_clear_bt_profile {
-            timeout-ms = <20>;
-            key-positions = <36 41>;
-            bindings = <&bt BT_CLR>;
-            layers = <3>;
-        };
         combo_mo_layer_3 {
             timeout-ms = <30>;
             key-positions = <37 40>;
             bindings = <&mo 3>;
-        };
-        combo_emark {
-            timeout-ms = <30>;
-            key-positions = <8 9>;
-            bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
-        combo_qmark {
-            timeout-ms = <30>;
+        combo_lbracket {
+            timeout-ms = <80>;
+            key-positions = <7 8>;
+            bindings = <&kp HOME>;
+            layers = <1>;
+        };
+        combo_rbracket {
+            timeout-ms = <80>;
             key-positions = <9 10>;
-            bindings = <&kp UNDERSCORE>;
-            layers = <0>;
+            bindings = <&kp END>;
+            layers = <1>;
         };
         combo_lbracket {
             timeout-ms = <80>;
             key-positions = <31 32>;
             bindings = <&kp RA(N7)>;
-            layers = <1>;
+            layers = <2>;
         };
         combo_rbracket {
             timeout-ms = <80>;
             key-positions = <33 34>;
             bindings = <&kp RA(N0)>;
-            layers = <1>;
+            layers = <2>;
+        };
+        combo_clear_bt_profile {
+            timeout-ms = <20>;
+            key-positions = <36 41>;
+            bindings = <&bt BT_CLR>;
+            layers = <3>;
         };
     };
 
@@ -118,7 +137,7 @@
         L1 {
             label = "Layer_1";
             bindings = <
-&none  &none                 &none             &none        &none  &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP      &kp END     &none
+&none  &none                 &none             &none        &none  &none  &none  &none     &kp PG_DN  &kp PG_UP      &none       &none
 &none  &lhm LSHIFT KP_MINUS  &lhm LCTRL QMARK  &lhm LALT X  &kp X  &none  &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT   &none
 &none  &none                 &none             &none        &none  &none  &none  &none     &none      &kp LS(EQUAL)  &kp LS(N2)  &none
                                                &none        &none  &none  &none  &none     &none    
