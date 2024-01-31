@@ -81,7 +81,7 @@
         combo_emark {
             timeout-ms = <30>;
             key-positions = <8 9>;
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
         combo_qmark {
