@@ -51,25 +51,19 @@
         };
         combo_dquote {
             timeout-ms = <20>;
-            key-positions = <2 3>;
+            key-positions = <6 7>;
             bindings = <&kp LS(N2)>;
             layers = <0>;
         };
         combo_squote {
             timeout-ms = <20>;
-            key-positions = <3 4>;
+            key-positions = <7 8>;
             bindings = <&kp BSLH>;
-            layers = <0>;
-        };
-        combo_btick {
-            timeout-ms = <20>;
-            key-positions = <4 5>;
-            bindings = <&kp LS(EQUAL)>;
             layers = <0>;
         };
         combo_emark {
             timeout-ms = <20>;
-            key-positions = <7 8>;
+            key-positions = <2 3>;
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
@@ -120,6 +114,12 @@
             key-positions = <37 40>;
             bindings = <&mo 3>;
             layers = <0>;
+        };
+        combo_btick {
+            timeout-ms = <40>;
+            key-positions = <7 8>;
+            bindings = <&kp LS(EQUAL)>;
+            layers = <1>;
         };
         combo_lbracket {
             timeout-ms = <40>;
