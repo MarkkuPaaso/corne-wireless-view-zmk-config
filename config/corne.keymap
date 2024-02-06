@@ -49,22 +49,16 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
-        combo_dquote {
-            timeout-ms = <20>;
-            key-positions = <6 7>;
-            bindings = <&kp LS(N2)>;
-            layers = <0>;
-        };
-        combo_squote {
-            timeout-ms = <20>;
-            key-positions = <7 8>;
-            bindings = <&kp BSLH>;
-            layers = <0>;
-        };
         combo_emark {
             timeout-ms = <20>;
             key-positions = <2 3>;
             bindings = <&kp EXCLAMATION>;
+            layers = <0>;
+        };
+        combo_dquote {
+            timeout-ms = <20>;
+            key-positions = <7 8>;
+            bindings = <&kp LS(N2)>;
             layers = <0>;
         };
         combo_qmark {
@@ -83,6 +77,12 @@
             timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp TAB>;
+            layers = <0>;
+        };
+        combo_squote {
+            timeout-ms = <20>;
+            key-positions = <19 20>;
+            bindings = <&kp BSLH>;
             layers = <0>;
         };
         combo_oe {
@@ -117,7 +117,7 @@
         };
         combo_btick {
             timeout-ms = <40>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
             bindings = <&kp LS(EQUAL)>;
             layers = <1>;
         };
