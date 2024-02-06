@@ -55,6 +55,18 @@
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
+        combo_at {
+            timeout-ms = <20>;
+            key-positions = <3 4>;
+            bindings = <&kp RA(N2)>;
+            layers = <0>;
+        };
+        combo_btick {
+            timeout-ms = <20>;
+            key-positions = <6 7>;
+            bindings = <&kp LS(EQUAL)>;
+            layers = <0>;
+        };
         combo_dquote {
             timeout-ms = <20>;
             key-positions = <7 8>;
@@ -109,17 +121,17 @@
             bindings = <&kp LS(PERIOD)>;
             layers = <0>;
         };
+        combo_slash {
+            timeout-ms = <20>;
+            key-positions = <33 34>;
+            bindings = <&kp KP_DIVIDE>;
+            layers = <0>;
+        };
         combo_mo_layer_3 {
             timeout-ms = <40>;
             key-positions = <37 40>;
             bindings = <&mo 3>;
             layers = <0>;
-        };
-        combo_btick {
-            timeout-ms = <40>;
-            key-positions = <19 20>;
-            bindings = <&kp LS(EQUAL)>;
-            layers = <1>;
         };
         combo_lbracket {
             timeout-ms = <40>;
@@ -135,13 +147,13 @@
         };
         combo_home {
             timeout-ms = <80>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
             bindings = <&kp HOME>;
             layers = <2>;
         };
         combo_end {
             timeout-ms = <80>;
-            key-positions = <9 10>;
+            key-positions = <21 22>;
             bindings = <&kp END>;
             layers = <2>;
         };
