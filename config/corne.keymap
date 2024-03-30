@@ -55,22 +55,10 @@
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
-        combo_at {
-            timeout-ms = <20>;
-            key-positions = <3 4>;
-            bindings = <&kp RA(N2)>;
-            layers = <0>;
-        };
         combo_btick {
             timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&kp LS(EQUAL)>;
-            layers = <0>;
-        };
-        combo_dquote {
-            timeout-ms = <20>;
-            key-positions = <7 8>;
-            bindings = <&kp LS(N2)>;
             layers = <0>;
         };
         combo_qmark {
@@ -80,7 +68,7 @@
             layers = <0>;
         };
         combo_delete {
-            timeout-ms = <20>;
+            timeout-ms = <40>;
             key-positions = <9 10>;
             bindings = <&kp DEL>;
             layers = <0>;
@@ -89,6 +77,12 @@
             timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp TAB>;
+            layers = <0>;
+        };
+        combo_dquote {
+            timeout-ms = <20>;
+            key-positions = <18 19>;
+            bindings = <&kp LS(N2)>;
             layers = <0>;
         };
         combo_squote {
@@ -109,22 +103,28 @@
             bindings = <&kp SINGLE_QUOTE>;
             layers = <0>;
         };
-        combo_scolon {
+        combo_dash {
             timeout-ms = <20>;
-            key-positions = <31 32>;
-            bindings = <&kp LS(COMMA)>;
+            key-positions = <30 31>;
+            bindings = <&kp KP_MINUS>;
             layers = <0>;
         };
         combo_colon {
             timeout-ms = <20>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
             bindings = <&kp LS(PERIOD)>;
+            layers = <0>;
+        };
+        combo_scolon {
+            timeout-ms = <20>;
+            key-positions = <32 33>;
+            bindings = <&kp LS(COMMA)>;
             layers = <0>;
         };
         combo_slash {
             timeout-ms = <20>;
             key-positions = <33 34>;
-            bindings = <&kp KP_DIVIDE>;
+            bindings = <&kp RA(MINUS)>;
             layers = <0>;
         };
         combo_mo_layer_3 {
@@ -133,13 +133,43 @@
             bindings = <&mo 3>;
             layers = <0>;
         };
-        combo_lbracket {
+        combo_multiply {
             timeout-ms = <40>;
-            key-positions = <31 32>;
-            bindings = <&kp RA(N7)>;
+            key-positions = <7 8>;
+            bindings = <&kp KP_MULTIPLY>;
+            layers = <1>;
+        };
+        combo_divide {
+            timeout-ms = <40>;
+            key-positions = <7 9>;
+            bindings = <&kp KP_DIVIDE>;
+            layers = <1>;
+        };
+        combo_equals {
+            timeout-ms = <40>;
+            key-positions = <21 22>;
+            bindings = <&kp RPAR>;
+            layers = <1>;
+        };
+        combo_abracket {
+            timeout-ms = <40>;
+            key-positions = <30 31>;
+            bindings = <&kp LS(NON_US_BSLH)>;
             layers = <1>;
         };
         combo_rbracket {
+            timeout-ms = <40>;
+            key-positions = <31 32>;
+            bindings = <&kp LS(N9)>;
+            layers = <1>;
+        };
+        combo_sbracket {
+            timeout-ms = <40>;
+            key-positions = <32 33>;
+            bindings = <&kp RA(N9)>;
+            layers = <1>;
+        };
+        combo_cbracket {
             timeout-ms = <40>;
             key-positions = <33 34>;
             bindings = <&kp RA(N0)>;
@@ -170,28 +200,28 @@
         L0 {
             label = "Layer_0";
             bindings = <
-&none  &kp Q          &kp W              &kp F            &kp P  &kp B      &kp J      &kp L  &kp U        &kp Y         &kp BACKSPACE       &none
-&none  &lhm LSHIFT A  &lhm_ctrl LCTRL R  &lhm_alt LALT S  &kp T  &kp G      &kp M      &kp N  &rhm LALT E  &rhm LCTRL I  &rhm LSHIFT O       &none
-&none  &lhm LGUI Z    &kp X              &kp C            &kp D  &kp V      &kp K      &kp H  &kp COMMA    &kp PERIOD    &rhm LGUI KP_MINUS  &none
+&none  &kp Q          &kp W              &kp F            &kp P  &kp B      &kp J      &kp L  &kp U        &kp Y         &kp BACKSPACE        &none
+&none  &lhm LSHIFT A  &lhm_ctrl LCTRL R  &lhm_alt LALT S  &kp T  &kp G      &kp M      &kp N  &rhm LALT E  &rhm LCTRL I  &rhm LSHIFT O        &none
+&none  &lhm LGUI Z    &kp X              &kp C            &kp D  &kp V      &kp K      &kp H  &kp COMMA    &kp PERIOD    &rhm LGUI KP_DIVIDE  &none
                                          &none            &mo 1  &kp SPACE  &kp ENTER  &mo 2  &none      
             >;
         };
         L1 {
             label = "Layer_1";
             bindings = <
-&none  &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp LS(BSLH)  &kp RA(RIGHT_BRACKET)  &kp BSLH    &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp RPAR    &none
-&none  &kp N1       &kp N2        &kp N3           &kp N4         &kp N5        &kp N6                 &kp N7      &kp N8           &kp N9               &kp N0      &none
-&none  &kp RA(3)    &kp RA(N2)    &kp LS(N3)       &kp RA(N4)     &kp RA(E)     &kp RA(NON_US_BSLH)    &kp RA(N8)  &kp LS(N8)       &kp LS(N9)           &kp RA(N9)  &none
-                                  &none            &none          &kp SPACE     &kp ENTER              &none       &none          
+&none  &none      &kp RA(N2)  &kp LS(N3)  &kp RA(E)   &kp LS(BSLH)  &none            &kp KP_PLUS  &kp KP_MINUS  &none       &none                &none
+&none  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &kp N6           &kp N7       &kp N8        &kp N9      &kp N0               &none
+&none  &kp RA(3)  &kp RA(N2)  &none       &kp RA(N4)  &none         &kp NON_US_BSLH  &kp LS(N8)   &kp RA(N8)    &kp RA(N7)  &kp RA(NON_US_BSLH)  &none
+                              &none       &mo 1       &kp SPACE     &kp ENTER        &none        &none       
             >;
         };
         L2 {
             label = "Layer_2";
             bindings = <
-&none  &none                 &none             &none        &none  &none  &none  &none     &kp PG_DN  &kp PG_UP  &none      &none
-&none  &lhm LSHIFT KP_MINUS  &lhm LCTRL QMARK  &lhm LALT X  &kp X  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none                 &none             &none        &none  &none  &none  &none     &none      &none      &none      &none
-                                               &none        &none  &none  &none  &none     &none    
+&none  &none       &none      &none     &none  &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &none  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none       &none      &none     &none  &none  &none  &none     &none      &none      &none      &none
+                              &none     &none  &none  &none  &mo 2     &none    
             >;
         };
         L3 {
