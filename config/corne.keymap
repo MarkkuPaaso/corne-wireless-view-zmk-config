@@ -145,12 +145,6 @@
             bindings = <&kp KP_DIVIDE>;
             layers = <1>;
         };
-        combo_btick {
-            timeout-ms = <30>;
-            key-positions = <18 19>;
-            bindings = <&kp LS(EQUAL)>;
-            layers = <1>;
-        };
         combo_equals {
             timeout-ms = <40>;
             key-positions = <21 22>;
