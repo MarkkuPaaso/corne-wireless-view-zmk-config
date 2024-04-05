@@ -128,7 +128,7 @@
             layers = <0>;
         };
         combo_mo_layer_3 {
-            timeout-ms = <40>;
+            timeout-ms = <80>;
             key-positions = <37 40>;
             bindings = <&mo 3>;
             layers = <0>;
@@ -145,9 +145,15 @@
             bindings = <&kp KP_DIVIDE>;
             layers = <1>;
         };
+        combo_uscore {
+            timeout-ms = <40>;
+            key-positions = <18 19>;
+            bindings = <&kp QMARK>;
+            layers = <1>;
+        };
         combo_equals {
             timeout-ms = <40>;
-            key-positions = <21 22>;
+            key-positions = <19 20>;
             bindings = <&kp RPAR>;
             layers = <1>;
         };
@@ -176,13 +182,13 @@
             layers = <1>;
         };
         combo_home {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 20>;
             bindings = <&kp HOME>;
             layers = <2>;
         };
         combo_end {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <21 22>;
             bindings = <&kp END>;
             layers = <2>;
@@ -209,9 +215,9 @@
         L1 {
             label = "Layer_1";
             bindings = <
-&none  &kp GRAVE  &kp RA(N2)  &kp LS(N3)  &kp RA(E)   &none      &kp LS(N6)       &kp KP_PLUS  &kp KP_MINUS  &kp LS(BSLH)  &kp BACKSPACE        &none
-&none  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5     &kp N6           &kp N7       &kp N8        &kp N9        &kp N0               &none
-&none  &none      &none       &kp RA(3)   &kp RA(N4)  &none      &kp NON_US_BSLH  &kp LS(N8)   &kp RA(N8)    &kp RA(N7)    &kp RA(NON_US_BSLH)  &none
+&none  &kp GRAVE  &kp RA(N2)  &kp LS(N3)  &kp RA(E)   &none      &kp LS(N6)       &kp KP_PLUS  &kp KP_MINUS  &none       &kp BACKSPACE        &none
+&none  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5     &kp N6           &kp N7       &kp N8        &kp N9      &kp N0               &none
+&none  &none      &none       &kp RA(N3)  &kp RA(N4)  &none      &kp NON_US_BSLH  &kp LS(N8)   &kp RA(N8)    &kp RA(N7)  &kp RA(NON_US_BSLH)  &none
                               &none       &mo 1       &kp SPACE  &kp ENTER        &none        &none       
             >;
         };
