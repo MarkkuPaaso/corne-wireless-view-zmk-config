@@ -97,12 +97,6 @@
             bindings = <&kp KP_MINUS>;
             layers = <0>;
         };
-        combo_uscore {
-            timeout-ms = <50>;
-            key-positions = <18 19 20>;
-            bindings = <&kp QMARK>;
-            layers = <0>;
-        };
         combo_colon {
             timeout-ms = <20>;
             key-positions = <19 20>;
@@ -110,7 +104,7 @@
             layers = <0>;
         };
         combo_scolon {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <19 20 21>;
             bindings = <&kp LS(COMMA)>;
             layers = <0>;
@@ -247,3 +241,4 @@
         };
     };
 };
+
