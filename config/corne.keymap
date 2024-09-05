@@ -194,7 +194,7 @@
             bindings = <&kp RA(N0)>;
             layers = <1>;
         };
-        combo_home {
+        combo_page_up {
             timeout-ms = <80>;
             key-positions = <8 9>;
             bindings = <&kp PG_UP>;
@@ -206,7 +206,7 @@
             bindings = <&kp HOME>;
             layers = <2>;
         };
-        combo_home {
+        combo_page_down {
             timeout-ms = <80>;
             key-positions = <20 21>;
             bindings = <&kp PG_DN>;
