@@ -196,8 +196,20 @@
         };
         combo_home {
             timeout-ms = <80>;
+            key-positions = <8 9>;
+            bindings = <&kp PG_UP>;
+            layers = <2>;
+        };
+        combo_home {
+            timeout-ms = <80>;
             key-positions = <19 20>;
             bindings = <&kp HOME>;
+            layers = <2>;
+        };
+        combo_home {
+            timeout-ms = <80>;
+            key-positions = <20 21>;
+            bindings = <&kp PG_DN>;
             layers = <2>;
         };
         combo_end {
