@@ -194,6 +194,18 @@
             bindings = <&bt BT_CLR>;
             layers = <3>;
         };
+        combo_bootloader_left {
+            timeout-ms = <100>;
+            key-positions = <1 13 25>;
+            bindings = <&bootloader>;
+            layers = <2>;
+        };
+        combo_bootloader_right {
+            timeout-ms = <100>;
+            key-positions = <10 22 34>;
+            bindings = <&bootloader>;
+            layers = <1>;
+        };
     };
 
     keymap {
