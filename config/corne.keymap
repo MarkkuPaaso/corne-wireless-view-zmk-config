@@ -134,7 +134,7 @@
             bindings = <&kp LGUI>;
             layers = <0 1 2>;
         };
-        combo_mo_layer_3 {
+        combo_momentary_layer_3 {
             timeout-ms = <80>;
             key-positions = <37 40>;
             bindings = <&mo 3>;
@@ -199,34 +199,34 @@
     keymap {
         compatible = "zmk,keymap";
         L0 {
-            label = "Layer_0";
+            label = "Base";
             bindings = <
 &none  &kp Q          &kp W              &kp F            &kp P  &kp B      &kp J      &kp L  &kp U        &kp Y         &kp BACKSPACE        &none
 &none  &lhm LSHIFT A  &lhm_ctrl LCTRL R  &lhm_alt LALT S  &kp T  &kp G      &kp M      &kp N  &rhm LALT E  &rhm LCTRL I  &rhm LSHIFT O        &none
 &none  &kp Z          &kp X              &kp C            &kp D  &kp V      &kp K      &kp H  &kp COMMA    &kp PERIOD    &rhm LGUI KP_DIVIDE  &none
-                                         &none            &mo 1  &kp SPACE  &kp ENTER  &mo 2  &none      
+                                         &none            &mo 2  &kp SPACE  &kp ENTER  &mo 1  &none      
             >;
         };
         L1 {
-            label = "Layer_1";
+            label = "NumChar";
             bindings = <
 &none  &kp GRAVE            &kp RA(N7)  &kp RA(N8)  &kp LS(N8)  &kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp LS(N9)   &kp RA(N9)    &kp RA(N0)             &kp BACKSPACE  &none
 &none  &kp N1               &kp N2      &kp N3      &kp N4      &kp N5           &kp N6               &kp N7       &kp N8        &kp N9                 &kp N0         &none
 &none  &kp RA(NON_US_BSLH)  &kp RA(N2)  &kp LS(N3)  &kp RA(N4)  &kp RA(E)        &kp LS(N6)           &kp KP_PLUS  &kp KP_MINUS  &kp RA(RIGHT_BRACKET)  &kp RA(MINUS)  &none
-                                        &none       &mo 1       &kp SPACE        &kp ENTER            &mo 3        &none       
+                                        &none       &none       &kp SPACE        &kp ENTER            &mo 1        &none       
             >;
         };
         L2 {
-            label = "Layer_2";
+            label = "Nav";
             bindings = <
-&none  &none       &none      &none     &none  &none  &none  &none     &kp PG_DN  &kp PG_UP  &kp BACKSPACE  &none
-&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &none  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT      &none
-&none  &none       &none      &none     &none  &none  &none  &none     &none      &none      &none          &none
-                              &none     &mo 3  &none  &none  &mo 2     &none    
+&none  &none       &none      &none     &none    &none  &none  &none     &kp PG_DN  &kp PG_UP  &kp BACKSPACE  &none
+&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp TAB  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT      &none
+&none  &none       &none      &none     &none    &none  &none  &none     &none      &none      &none          &none
+                              &none     &mo 2    &none  &none  &none     &none    
             >;
         };
         L3 {
-            label = "Layer_3";
+            label = "Funcs";
             bindings = <
 &none  &kp F1      &kp F2     &kp F3      &kp F4  &kp F5  &kp F6        &kp F7          &kp F8             &kp F9           &kp F10  &none
 &none  &kp LSHIFT  &kp LCTRL  &kp LALT    &none   &none   &kp C_BRI_DN  &kp C_BRI_UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11  &none
