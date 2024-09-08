@@ -43,6 +43,15 @@
     };
 
     macros {
+        macro_backtick: macro_backtick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp RSHIFT>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_release &kp RSHIFT>,
+                <&macro_tap &kp SPACE>;
+        };
         macro_tilde: macro_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -71,7 +80,7 @@
         combo_btick {
             timeout-ms = <20>;
             key-positions = <6 7>;
-            bindings = <&kp LS(EQUAL)>;
+            bindings = <&macro_backtick>;
             layers = <0>;
         };
         combo_squote {
