@@ -52,6 +52,14 @@
                 <&macro_release &kp RSHIFT>,
                 <&macro_tap &kp SPACE>;
         };
+        macro_degree: macro_degree {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>,
+                <&macro_release &kp LALT>;
+        };
         macro_greater_or_equal: macro_greater_or_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -63,6 +71,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap &kp NON_US_BSLH &kp RPAR>;
+        };
+        macro_permille: macro_permille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N7>,
+                <&macro_release &kp LALT>;
         };
         macro_str_neuro: macro_str_neuro {
             compatible = "zmk,behavior-macro";
@@ -89,6 +105,12 @@
             timeout-ms = <20>;
             key-positions = <13 22>;
             bindings = <&kp CAPSLOCK>;
+            layers = <0>;
+        };
+        combo_insert {
+            timeout-ms = <20>;
+            key-positions = <25 34>;
+            bindings = <&kp INSERT>;
             layers = <0>;
         };
         combo_esc {
@@ -151,6 +173,12 @@
             bindings = <&kp KP_MINUS>;
             layers = <0>;
         };
+        combo_tilde {
+            timeout-ms = <80>;
+            key-positions = <18 19 20>;
+            bindings = <&macro_tilde>;
+            layers = <0>;
+        };
         combo_equals {
             timeout-ms = <20>;
             key-positions = <19 20>;
@@ -187,6 +215,12 @@
             bindings = <&kp QMARK>;
             layers = <0>;
         };
+        combo_pipe {
+            timeout-ms = <20>;
+            key-positions = <30 31 32>;
+            bindings = <&kp RA(NON_US_BSLH)>;
+            layers = <0>;
+        };
         combo_momentary_layer_3 {
             timeout-ms = <80>;
             key-positions = <37 40>;
@@ -211,12 +245,6 @@
             bindings = <&macro_greater_or_equal>;
             layers = <1>;
         };
-        combo_tilde {
-            timeout-ms = <80>;
-            key-positions = <18 19>;
-            bindings = <&macro_tilde>;
-            layers = <1>;
-        };
         combo_pound {
             timeout-ms = <80>;
             key-positions = <26 27 28>;
@@ -227,6 +255,18 @@
             timeout-ms = <80>;
             key-positions = <27 28>;
             bindings = <&kp RA(E)>;
+            layers = <1>;
+        };
+        combo_permille {
+            timeout-ms = <80>;
+            key-positions = <27 28 29>;
+            bindings = <&macro_permille>;
+            layers = <1>;
+        };
+        combo_degree {
+            timeout-ms = <80>;
+            key-positions = <28 29>;
+            bindings = <&macro_degree>;
             layers = <1>;
         };
         combo_multiply {
