@@ -47,38 +47,38 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp RSHIFT>,
-                <&macro_tap &kp EQUAL>,
-                <&macro_release &kp RSHIFT>,
-                <&macro_tap &kp SPACE>;
+                <&macro_press &wait-ms 50 &kp RSHIFT>,
+                <&macro_tap &wait-ms 50 &kp EQUAL>,
+                <&macro_release &wait-ms 50 &kp RSHIFT>,
+                <&macro_tap &wait-ms 50 &kp SPACE>;
         };
         macro_degree: macro_degree {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>,
-                <&macro_release &kp LALT>;
+                <&macro_press &wait-ms 50 &kp LALT>,
+                <&macro_tap &wait-ms 50 &kp KP_N0 &wait-ms 50 &kp KP_N1 &wait-ms 50 &kp KP_N7 &wait-ms 50 &kp KP_N6>,
+                <&macro_release &wait-ms 50 &kp LALT>;
         };
         macro_greater_or_equal: macro_greater_or_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kp LS(NON_US_BSLH) &kp RPAR>;
+                <&macro_tap &wait-ms 50 &kp LS(NON_US_BSLH) &wait-ms 50 &kp RPAR>;
         };
         macro_less_or_equal: macro_less_or_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kp NON_US_BSLH &kp RPAR>;
+                <&macro_tap &wait-ms 50 &kp NON_US_BSLH &wait-ms 50 &kp RPAR>;
         };
         macro_permille: macro_permille {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N7>,
-                <&macro_release &kp LALT>;
+                <&macro_press &wait-ms 50 &kp LALT>,
+                <&macro_tap &wait-ms 50 &kp KP_N0 &wait-ms 50 &kp KP_N1 &wait-ms 50 &kp KP_N3 &wait-ms 50 &kp KP_N7>,
+                <&macro_release &wait-ms 50 &kp LALT>;
         };
         macro_str_neuro: macro_str_neuro {
             compatible = "zmk,behavior-macro";
@@ -86,16 +86,16 @@
             tap-ms = <50>;
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kp LS(C) &kp LS(N) &kp N2 &kp KP_MINUS &kp N1 &kp N2 &kp LS(PERIOD) &kp SPACE &kp N &kp O &kp R &kp M &kp A &kp A &kp L &kp I &kp L &kp SEMICOLON &kp Y &kp D &kp SEMICOLON &kp S &kp PERIOD &kp SPACE &kp LS(S) &kp I &kp L &kp M &kp I &kp E &kp N &kp SPACE &kp L &kp I &kp I &kp K &kp K &kp E &kp E &kp T &kp SPACE &kp LS(H) &kp KP_MINUS &kp T &kp E &kp S &kp T &kp I &kp L &kp L &kp SINGLE_QUOTE &kp SPACE &kp N &kp O &kp R &kp M &kp A &kp A &kp L &kp I &kp T &kp COMMA &kp SPACE &kp E &kp I &kp SPACE &kp N &kp Y &kp S &kp T &kp A &kp G &kp M &kp U &kp S &kp T &kp A &kp PERIOD &kp SPACE &kp LS(V) &kp A &kp L &kp O &kp R &kp E &kp A &kp K &kp T &kp I &kp O &kp SPACE &kp A &kp D &kp E &kp K &kp V &kp A &kp A &kp T &kp T &kp I &kp COMMA &kp SPACE &kp S &kp Y &kp M &kp M &kp E &kp T &kp R &kp I &kp N &kp E &kp N &kp PERIOD &kp SPACE &kp LS(K) &kp A &kp S &kp V &kp O &kp J &kp E &kp N &kp SPACE &kp T &kp U &kp N &kp T &kp O &kp SPACE &kp N &kp O &kp R &kp M &kp A &kp A &kp L &kp I &kp COMMA &kp SPACE &kp S &kp Y &kp M &kp M &kp E &kp T &kp R &kp I &kp N &kp E &kp N &kp PERIOD &kp SPACE &kp LS(K) &kp A &kp S &kp V &kp O &kp J &kp E &kp N &kp SPACE &kp M &kp O &kp T &kp O &kp R &kp I &kp I &kp K &kp K &kp A &kp SPACE &kp N &kp O &kp R &kp M &kp A &kp A &kp L &kp I &kp PERIOD &kp SPACE &kp LS(K) &kp I &kp E &kp L &kp I &kp SPACE &kp E &kp I &kp SPACE &kp D &kp E &kp V &kp I &kp O &kp I &kp PERIOD &kp SPACE &kp LS(H) &kp A &kp R &kp T &kp I &kp A &kp T &kp SPACE &kp K &kp O &kp H &kp O &kp A &kp V &kp A &kp T &kp SPACE &kp S &kp Y &kp M &kp M &kp E &kp T &kp R &kp I &kp S &kp E &kp S &kp T &kp I &kp PERIOD &kp SPACE &kp LS(S) &kp LS(N) &kp LS(K) &kp SPACE &kp T &kp A &kp R &kp K &kp K &kp A &kp PERIOD &kp SPACE &kp LS(R) &kp H &kp O &kp M &kp B &kp E &kp R &kp G &kp SPACE &kp S &kp T &kp A &kp B &kp I &kp I &kp L &kp I &kp PERIOD &kp SPACE &kp LS(E) &kp I &kp SPACE &kp T &kp SINGLE_QUOTE &kp R &kp I &kp N &kp SINGLE_QUOTE &kp SINGLE_QUOTE &kp PERIOD>;
+                <&macro_tap &wait-ms 50 &kp LS(C) &wait-ms 50 &kp LS(N) &wait-ms 50 &kp N2 &wait-ms 50 &kp KP_MINUS &wait-ms 50 &kp N1 &wait-ms 50 &kp N2 &wait-ms 50 &kp LS(PERIOD) &wait-ms 50 &kp SPACE &wait-ms 50 &kp N &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp M &wait-ms 50 &kp A &wait-ms 50 &kp A &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp L &wait-ms 50 &kp SEMICOLON &wait-ms 50 &kp Y &wait-ms 50 &kp D &wait-ms 50 &kp SEMICOLON &wait-ms 50 &kp S &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(S) &wait-ms 50 &kp I &wait-ms 50 &kp L &wait-ms 50 &kp M &wait-ms 50 &kp I &wait-ms 50 &kp E &wait-ms 50 &kp N &wait-ms 50 &kp SPACE &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp I &wait-ms 50 &kp K &wait-ms 50 &kp K &wait-ms 50 &kp E &wait-ms 50 &kp E &wait-ms 50 &kp T &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(H) &wait-ms 50 &kp KP_MINUS &wait-ms 50 &kp T &wait-ms 50 &kp E &wait-ms 50 &kp S &wait-ms 50 &kp T &wait-ms 50 &kp I &wait-ms 50 &kp L &wait-ms 50 &kp L &wait-ms 50 &kp SINGLE_QUOTE &wait-ms 50 &kp SPACE &wait-ms 50 &kp N &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp M &wait-ms 50 &kp A &wait-ms 50 &kp A &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp T &wait-ms 50 &kp COMMA &wait-ms 50 &kp SPACE &wait-ms 50 &kp E &wait-ms 50 &kp I &wait-ms 50 &kp SPACE &wait-ms 50 &kp N &wait-ms 50 &kp Y &wait-ms 50 &kp S &wait-ms 50 &kp T &wait-ms 50 &kp A &wait-ms 50 &kp G &wait-ms 50 &kp M &wait-ms 50 &kp U &wait-ms 50 &kp S &wait-ms 50 &kp T &wait-ms 50 &kp A &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(V) &wait-ms 50 &kp A &wait-ms 50 &kp L &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp E &wait-ms 50 &kp A &wait-ms 50 &kp K &wait-ms 50 &kp T &wait-ms 50 &kp I &wait-ms 50 &kp O &wait-ms 50 &kp SPACE &wait-ms 50 &kp A &wait-ms 50 &kp D &wait-ms 50 &kp E &wait-ms 50 &kp K &wait-ms 50 &kp V &wait-ms 50 &kp A &wait-ms 50 &kp A &wait-ms 50 &kp T &wait-ms 50 &kp T &wait-ms 50 &kp I &wait-ms 50 &kp COMMA &wait-ms 50 &kp SPACE &wait-ms 50 &kp S &wait-ms 50 &kp Y &wait-ms 50 &kp M &wait-ms 50 &kp M &wait-ms 50 &kp E &wait-ms 50 &kp T &wait-ms 50 &kp R &wait-ms 50 &kp I &wait-ms 50 &kp N &wait-ms 50 &kp E &wait-ms 50 &kp N &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(K) &wait-ms 50 &kp A &wait-ms 50 &kp S &wait-ms 50 &kp V &wait-ms 50 &kp O &wait-ms 50 &kp J &wait-ms 50 &kp E &wait-ms 50 &kp N &wait-ms 50 &kp SPACE &wait-ms 50 &kp T &wait-ms 50 &kp U &wait-ms 50 &kp N &wait-ms 50 &kp T &wait-ms 50 &kp O &wait-ms 50 &kp SPACE &wait-ms 50 &kp N &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp M &wait-ms 50 &kp A &wait-ms 50 &kp A &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp COMMA &wait-ms 50 &kp SPACE &wait-ms 50 &kp S &wait-ms 50 &kp Y &wait-ms 50 &kp M &wait-ms 50 &kp M &wait-ms 50 &kp E &wait-ms 50 &kp T &wait-ms 50 &kp R &wait-ms 50 &kp I &wait-ms 50 &kp N &wait-ms 50 &kp E &wait-ms 50 &kp N &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(K) &wait-ms 50 &kp A &wait-ms 50 &kp S &wait-ms 50 &kp V &wait-ms 50 &kp O &wait-ms 50 &kp J &wait-ms 50 &kp E &wait-ms 50 &kp N &wait-ms 50 &kp SPACE &wait-ms 50 &kp M &wait-ms 50 &kp O &wait-ms 50 &kp T &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp I &wait-ms 50 &kp I &wait-ms 50 &kp K &wait-ms 50 &kp K &wait-ms 50 &kp A &wait-ms 50 &kp SPACE &wait-ms 50 &kp N &wait-ms 50 &kp O &wait-ms 50 &kp R &wait-ms 50 &kp M &wait-ms 50 &kp A &wait-ms 50 &kp A &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(K) &wait-ms 50 &kp I &wait-ms 50 &kp E &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp SPACE &wait-ms 50 &kp E &wait-ms 50 &kp I &wait-ms 50 &kp SPACE &wait-ms 50 &kp D &wait-ms 50 &kp E &wait-ms 50 &kp V &wait-ms 50 &kp I &wait-ms 50 &kp O &wait-ms 50 &kp I &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(H) &wait-ms 50 &kp A &wait-ms 50 &kp R &wait-ms 50 &kp T &wait-ms 50 &kp I &wait-ms 50 &kp A &wait-ms 50 &kp T &wait-ms 50 &kp SPACE &wait-ms 50 &kp K &wait-ms 50 &kp O &wait-ms 50 &kp H &wait-ms 50 &kp O &wait-ms 50 &kp A &wait-ms 50 &kp V &wait-ms 50 &kp A &wait-ms 50 &kp T &wait-ms 50 &kp SPACE &wait-ms 50 &kp S &wait-ms 50 &kp Y &wait-ms 50 &kp M &wait-ms 50 &kp M &wait-ms 50 &kp E &wait-ms 50 &kp T &wait-ms 50 &kp R &wait-ms 50 &kp I &wait-ms 50 &kp S &wait-ms 50 &kp E &wait-ms 50 &kp S &wait-ms 50 &kp T &wait-ms 50 &kp I &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(S) &wait-ms 50 &kp LS(N) &wait-ms 50 &kp LS(K) &wait-ms 50 &kp SPACE &wait-ms 50 &kp T &wait-ms 50 &kp A &wait-ms 50 &kp R &wait-ms 50 &kp K &wait-ms 50 &kp K &wait-ms 50 &kp A &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(R) &wait-ms 50 &kp H &wait-ms 50 &kp O &wait-ms 50 &kp M &wait-ms 50 &kp B &wait-ms 50 &kp E &wait-ms 50 &kp R &wait-ms 50 &kp G &wait-ms 50 &kp SPACE &wait-ms 50 &kp S &wait-ms 50 &kp T &wait-ms 50 &kp A &wait-ms 50 &kp B &wait-ms 50 &kp I &wait-ms 50 &kp I &wait-ms 50 &kp L &wait-ms 50 &kp I &wait-ms 50 &kp PERIOD &wait-ms 50 &kp SPACE &wait-ms 50 &kp LS(E) &wait-ms 50 &kp I &wait-ms 50 &kp SPACE &wait-ms 50 &kp T &wait-ms 50 &kp SINGLE_QUOTE &wait-ms 50 &kp R &wait-ms 50 &kp I &wait-ms 50 &kp N &wait-ms 50 &kp SINGLE_QUOTE &wait-ms 50 &kp SINGLE_QUOTE &wait-ms 50 &kp PERIOD>;
         };
         macro_tilde: macro_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp RALT>,
-                <&macro_tap &kp RIGHT_BRACKET>,
-                <&macro_release &kp RALT>,
-                <&macro_tap &kp SPACE>;
+                <&macro_press &wait-ms 50 &kp RALT>,
+                <&macro_tap &wait-ms 50 &kp RIGHT_BRACKET>,
+                <&macro_release &wait-ms 50 &kp RALT>,
+                <&macro_tap &wait-ms 50 &kp SPACE>;
         };
     };
 
@@ -310,18 +310,6 @@
             key-positions = <36 41>;
             bindings = <&bt BT_CLR>;
             layers = <3>;
-        };
-        combo_bootloader_left {
-            timeout-ms = <100>;
-            key-positions = <1 13 25>;
-            bindings = <&bootloader>;
-            layers = <2>;
-        };
-        combo_bootloader_right {
-            timeout-ms = <100>;
-            key-positions = <10 22 34>;
-            bindings = <&bootloader>;
-            layers = <1>;
         };
     };
 
