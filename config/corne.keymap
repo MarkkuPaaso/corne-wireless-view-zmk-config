@@ -134,28 +134,40 @@
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
-        combo_btick {
+        combo_dquote {
             timeout-ms = <20>;
-            key-positions = <6 7>;
-            bindings = <&macro_backtick>;
+            key-positions = <2 3 4>;
+            bindings = <&kp LS(N2)>;
             layers = <0>;
         };
         combo_squote {
             timeout-ms = <20>;
-            key-positions = <7 8>;
+            key-positions = <3 4>;
             bindings = <&kp BSLH>;
             layers = <0>;
         };
-        combo_dquote {
+        combo_btick {
             timeout-ms = <20>;
-            key-positions = <7 8 9>;
-            bindings = <&kp LS(N2)>;
+            key-positions = <4 5>;
+            bindings = <&macro_backtick>;
             layers = <0>;
         };
-        combo_circumflex {
+        combo_uscore {
             timeout-ms = <20>;
-            key-positions = <7 9>;
-            bindings = <&macro_circumflex>;
+            key-positions = <6 7>;
+            bindings = <&kp QMARK>;
+            layers = <0>;
+        };
+        combo_equals {
+            timeout-ms = <20>;
+            key-positions = <7 8>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+        combo_dash {
+            timeout-ms = <20>;
+            key-positions = <7 8 9>;
+            bindings = <&kp KP_MINUS>;
             layers = <0>;
         };
         combo_qmark {
@@ -182,27 +194,15 @@
             bindings = <&kp TAB>;
             layers = <0>;
         };
-        combo_tilde {
-            timeout-ms = <80>;
-            key-positions = <18 19 20>;
-            bindings = <&macro_tilde>;
-            layers = <0>;
-        };
-        combo_equals {
-            timeout-ms = <20>;
-            key-positions = <19 20>;
-            bindings = <&kp RPAR>;
-            layers = <0>;
-        };
         combo_colon {
             timeout-ms = <20>;
-            key-positions = <20 21>;
+            key-positions = <19 20>;
             bindings = <&kp LS(PERIOD)>;
             layers = <0>;
         };
         combo_scolon {
             timeout-ms = <20>;
-            key-positions = <19 20 21>;
+            key-positions = <20 21>;
             bindings = <&kp LS(COMMA)>;
             layers = <0>;
         };
@@ -218,22 +218,16 @@
             bindings = <&kp LGUI>;
             layers = <0 1 2>;
         };
-        combo_pipe {
-            timeout-ms = <20>;
-            key-positions = <30 31 32>;
-            bindings = <&kp RA(NON_US_BSLH)>;
-            layers = <0>;
-        };
-        combo_dash {
+        combo_tilde {
             timeout-ms = <20>;
             key-positions = <31 32>;
-            bindings = <&kp KP_MINUS>;
+            bindings = <&macro_tilde>;
             layers = <0>;
         };
-        combo_uscore {
+        combo_pipe {
             timeout-ms = <20>;
-            key-positions = <31 32 33>;
-            bindings = <&kp QMARK>;
+            key-positions = <32 33>;
+            bindings = <&kp RA(NON_US_BSLH)>;
             layers = <0>;
         };
         combo_momentary_layer_3 {
@@ -252,6 +246,12 @@
             timeout-ms = <80>;
             key-positions = <4 5>;
             bindings = <&macro_less_or_equal>;
+            layers = <1>;
+        };
+        combo_circumflex {
+            timeout-ms = <80>;
+            key-positions = <5 6>;
+            bindings = <&macro_circumflex>;
             layers = <1>;
         };
         combo_greater_or_equal {
