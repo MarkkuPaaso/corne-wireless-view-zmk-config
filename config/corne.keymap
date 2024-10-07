@@ -43,6 +43,20 @@
     };
 
     macros {
+        macro_altpressedlayeroff: macro_altpressedlayeroff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release &kp LALT>,
+                <&&to 0>;
+        };
+        macro_altpressedlayeron: macro_altpressedlayeron {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&&to 5>,
+                <&macro_press &kp LALT>;
+        };
         macro_backtick: macro_backtick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -80,6 +94,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap &kp NON_US_BSLH &kp RPAR>;
+        };
+        macro_lshifttab: macro_lshifttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LSHIFT>;
         };
         macro_permille: macro_permille {
             compatible = "zmk,behavior-macro";
@@ -218,6 +240,11 @@
             bindings = <&kp LGUI>;
             layers = <0 1 2>;
         };
+        combo_enter_altlayer {
+            timeout-ms = <20>;
+            key-positions = <25 27>;
+            bindings = <&macro_altpressedlayeron>;
+        };
         combo_tilde {
             timeout-ms = <20>;
             key-positions = <31 32>;
@@ -326,6 +353,18 @@
             bindings = <&bt BT_CLR>;
             layers = <3>;
         };
+        combo_exit_altlayer_esc {
+            timeout-ms = <100>;
+            key-positions = <1 2>;
+            bindings = <&macro_altpressedlayeroff>;
+            layers = <5>;
+        };
+        combo_exit_altlayer {
+            timeout-ms = <50>;
+            key-positions = <25 27>;
+            bindings = <&macro_altpressedlayeroff>;
+            layers = <5>;
+        };
     };
 
     keymap {
@@ -373,6 +412,15 @@
 &none  &none  &none  &none  &none  &none  &none  &macro_str_neuro  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none             &none  &none  &none  &none
                      &none  &none  &none  &none  &none             &none
+            >;
+        };
+        L5 {
+            label = "NAV";
+            bindings = <
+&none  &none             &none  &none    &none  &none  &none                      &none             &none  &none  &none  &none
+&none  &none             &none  &none    &none  &none  &none                      &macro_str_neuro  &none  &none  &none  &none
+&none  &macro_lshifttab  &none  &kp TAB  &none  &none  &none                      &none             &none  &none  &none  &none
+                                &none    &none  &none  &macro_altpressedlayeroff  &none             &none
             >;
         };
     };
