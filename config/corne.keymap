@@ -250,7 +250,7 @@
         };
         combo_toggle_navlayer {
             timeout-ms = <20>;
-            key-positions = <13 15>;
+            key-positions = <15 17>;
             bindings = <&tog 5>;
             layers = <0 5>;
         };
@@ -414,10 +414,10 @@
         L5 {
             label = "NAV";
             bindings = <
-&none  &none               &none                &none        &none    &none  &none  &none  &none  &none  &none  &none
-&none  &macro_altnavlayer  &macro_ctrlnavlayer  &kp LS(TAB)  &kp TAB  &none  &none  &none  &none  &none  &none  &none
-&none  &none               &none                &none        &none    &none  &none  &none  &none  &none  &none  &none
-                                                &none        &none    &none  &none  &none  &none
+&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
+&none  &none  &macro_ctrlnavlayer  &macro_altnavlayer  &kp LS(TAB)  &kp TAB  &none  &none  &none  &none  &none  &none
+&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
+                                   &none               &none        &none    &none  &none  &none
             >;
         };
     };
