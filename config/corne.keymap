@@ -111,6 +111,16 @@
                 <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N7>,
                 <&macro_release &kp LALT>;
         };
+        macro_stab: macro_stab {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LSHIFT>;
+        };
         macro_str_neuro: macro_str_neuro {
             compatible = "zmk,behavior-macro";
             wait-ms = <10>;
@@ -415,7 +425,7 @@
             label = "NAV";
             bindings = <
 &none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
-&none  &none  &macro_ctrlnavlayer  &macro_altnavlayer  &kp LS(TAB)  &kp TAB  &none  &none  &none  &none  &none  &none
+&none  &none  &macro_ctrlnavlayer  &macro_altnavlayer  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none
 &none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
                                    &none               &none        &none    &none  &none  &none
             >;
