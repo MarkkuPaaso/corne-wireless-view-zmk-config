@@ -43,43 +43,16 @@
     };
 
     macros {
-        macro_altpressedlayeroff: macro_altpressedlayeroff {
+        macro_altnavlayer: macro_altnavlayer {
             compatible = "zmk,behavior-macro";
             wait-ms = <10>;
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
+                <&macro_press &kp LALT>,
+                <&macro_pause_for_release>,
                 <&macro_release &kp LALT>,
-                <&macro_release &kp LCTRL>,
-                <&macro_release &mo 5>;
-        };
-        macro_altpressedlayeron: macro_altpressedlayeron {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &mo 5>;
-        };
-        macro_altstab: macro_altstab {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LALT>,
-                <&macro_press &kp LSHIFT>,
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LSHIFT>;
-        };
-        macro_alttab: macro_alttab {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp TAB>;
+                <&to 0>;
         };
         macro_backtick: macro_backtick {
             compatible = "zmk,behavior-macro";
@@ -99,29 +72,16 @@
                 <&macro_release &kp RSHIFT>,
                 <&macro_tap &kp SPACE>;
         };
-        macro_ctrlstab: macro_ctrlstab {
+        macro_ctrlnavlayer: macro_ctrlnavlayer {
             compatible = "zmk,behavior-macro";
             wait-ms = <10>;
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
-                <&macro_release &kp LALT>,
                 <&macro_press &kp LCTRL>,
-                <&macro_press &kp LSHIFT>,
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LSHIFT>,
-                <&macro_release &kp LCTRL>;
-        };
-        macro_ctrltab: macro_ctrltab {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_release &kp LALT>,
-                <&macro_press &kp LCTRL>,
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LCTRL>;
+                <&macro_pause_for_release>,
+                <&macro_release &kp LCTRL>,
+                <&to 0>;
         };
         macro_degree: macro_degree {
             compatible = "zmk,behavior-macro";
@@ -288,10 +248,11 @@
             bindings = <&kp LGUI>;
             layers = <0 1 2>;
         };
-        combo_enter_altlayer {
+        combo_toggle_navlayer {
             timeout-ms = <20>;
-            key-positions = <25 27>;
-            bindings = <&macro_altpressedlayeron>;
+            key-positions = <13 15>;
+            bindings = <&to 5>;
+            layers = <0 5>;
         };
         combo_tilde {
             timeout-ms = <20>;
@@ -401,18 +362,6 @@
             bindings = <&bt BT_CLR>;
             layers = <3>;
         };
-        combo_exit_altlayer_esc {
-            timeout-ms = <100>;
-            key-positions = <1 2>;
-            bindings = <&macro_altpressedlayeroff>;
-            layers = <5>;
-        };
-        combo_exit_altlayer {
-            timeout-ms = <50>;
-            key-positions = <25 27>;
-            bindings = <&macro_altpressedlayeroff>;
-            layers = <5>;
-        };
     };
 
     keymap {
@@ -465,10 +414,10 @@
         L5 {
             label = "NAV";
             bindings = <
-&none  &none            &none                      &none           &none  &none  &none                      &none  &none  &none  &none  &none
-&none  &macro_ctrlstab  &none                      &macro_ctrltab  &none  &none  &none                      &none  &none  &none  &none  &none
-&none  &macro_altstab   &macro_altpressedlayeroff  &macro_alttab   &none  &none  &none                      &none  &none  &none  &none  &none
-                                                   &none           &none  &none  &macro_altpressedlayeroff  &none  &none
+&none  &none               &none                &none        &none    &none  &none  &none  &none  &none  &none  &none
+&none  &macro_altnavlayer  &macro_ctrlnavlayer  &kp LS(TAB)  &kp TAB  &none  &none  &none  &none  &none  &none  &none
+&none  &none               &none                &none        &none    &none  &none  &none  &none  &none  &none  &none
+                                                &none        &none    &none  &none  &none  &none
             >;
         };
     };
