@@ -45,6 +45,8 @@
     macros {
         macro_altpressedlayeroff: macro_altpressedlayeroff {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_release &kp LALT>,
@@ -53,17 +55,16 @@
         };
         macro_altpressedlayeron: macro_altpressedlayeron {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
-                <&macro_press &mo 5>,
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp TAB>,
-                <&macro_press &kp LSHIFT>,
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LSHIFT>;
+                <&macro_press &mo 5>;
         };
         macro_altstab: macro_altstab {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LALT>,
@@ -73,6 +74,8 @@
         };
         macro_alttab: macro_alttab {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LALT>,
@@ -98,6 +101,8 @@
         };
         macro_ctrlstab: macro_ctrlstab {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_release &kp LALT>,
@@ -109,6 +114,8 @@
         };
         macro_ctrltab: macro_ctrltab {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_release &kp LALT>,
