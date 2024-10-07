@@ -48,13 +48,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_release &kp LALT>,
-                <&&to 0>;
+                <&to 0>;
         };
         macro_altpressedlayeron: macro_altpressedlayeron {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&&to 5>,
+                <&to 5>,
                 <&macro_press &kp LALT>;
         };
         macro_backtick: macro_backtick {
