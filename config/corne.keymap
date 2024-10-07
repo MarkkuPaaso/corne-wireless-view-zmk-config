@@ -52,7 +52,7 @@
                 <&macro_press &kp LALT>,
                 <&macro_pause_for_release>,
                 <&macro_release &kp LALT>,
-                <&to 0>;
+                <&macro_tap &to 0>;
         };
         macro_backtick: macro_backtick {
             compatible = "zmk,behavior-macro";
@@ -81,7 +81,7 @@
                 <&macro_press &kp LCTRL>,
                 <&macro_pause_for_release>,
                 <&macro_release &kp LCTRL>,
-                <&to 0>;
+                <&macro_tap &to 0>;
         };
         macro_degree: macro_degree {
             compatible = "zmk,behavior-macro";
@@ -251,7 +251,7 @@
         combo_toggle_navlayer {
             timeout-ms = <20>;
             key-positions = <13 15>;
-            bindings = <&to 5>;
+            bindings = <&tog 5>;
             layers = <0 5>;
         };
         combo_tilde {
