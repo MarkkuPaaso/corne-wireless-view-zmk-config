@@ -49,10 +49,23 @@
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
+                <&macro_press &mo 5>,
                 <&macro_press &kp LALT>,
                 <&macro_pause_for_release>,
                 <&macro_release &kp LALT>,
-                <&macro_tap &to 0>;
+                <&macro_release &mo 5>;
+        };
+        macro_altnavlayer: macro_altnavlayer {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &mo 5>,
+                <&macro_press &kp LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LCTRL>,
+                <&macro_release &mo 5>;
         };
         macro_backtick: macro_backtick {
             compatible = "zmk,behavior-macro";
@@ -72,16 +85,15 @@
                 <&macro_release &kp RSHIFT>,
                 <&macro_tap &kp SPACE>;
         };
-        macro_ctrlnavlayer: macro_ctrlnavlayer {
+        macro_comment: macro_comment {
             compatible = "zmk,behavior-macro";
             wait-ms = <10>;
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LCTRL>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp LCTRL>,
-                <&macro_tap &to 0>;
+                <&macro_tap &kp BSLH>,
+                <&macro_release &kp LCTRL>;
         };
         macro_degree: macro_degree {
             compatible = "zmk,behavior-macro";
@@ -174,6 +186,12 @@
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
+        combo_ctrlnavlayer {
+            timeout-ms = <20>;
+            key-positions = <2 5>;
+            bindings = <&macro_altnavlayer>;
+            layers = <0>;
+        };
         combo_dquote {
             timeout-ms = <20>;
             key-positions = <2 3 4>;
@@ -234,6 +252,12 @@
             bindings = <&kp TAB>;
             layers = <0>;
         };
+        combo_altnavlayer {
+            timeout-ms = <20>;
+            key-positions = <14 17>;
+            bindings = <&macro_altnavlayer>;
+            layers = <0>;
+        };
         combo_colon {
             timeout-ms = <20>;
             key-positions = <19 20>;
@@ -256,7 +280,7 @@
             timeout-ms = <20>;
             key-positions = <33 34>;
             bindings = <&kp RA(MINUS)>;
-            layers = <0>;
+            layers = <0 1>;
         };
         combo_gui {
             timeout-ms = <20>;
@@ -391,10 +415,10 @@
         L2 {
             label = "Nav";
             bindings = <
-&none  &none       &none      &none     &none    &none  &none  &none     &kp PG_DN  &kp PG_UP  &kp BACKSPACE  &none
-&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp TAB  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT      &none
-&none  &none       &none      &none     &none    &none  &none  &none     &none      &none      &none          &none
-                              &none     &mo 1    &none  &none  &none     &none    
+&none  &none       &none      &none           &none    &none  &none  &none     &kp PG_DN  &kp PG_UP  &kp BACKSPACE  &none
+&none  &kp LSHIFT  &kp LCTRL  &kp LALT        &kp TAB  &none  &none  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT      &none
+&none  &none       &none      &macro_comment  &none    &none  &none  &none     &none      &none      &none          &none
+                              &none           &mo 1    &none  &none  &none     &none    
             >;
         };
         L3 {
@@ -418,10 +442,10 @@
         L5 {
             label = "NAV";
             bindings = <
-&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
-&none  &none  &macro_ctrlnavlayer  &macro_altnavlayer  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none
-&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
-                                   &none               &none        &none    &none  &none  &none
+&none  &none  &none  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none        &none    &none  &none  &none  &none  &none  &none  &none
+                     &none        &none    &none  &none  &none  &none
             >;
         };
     };
@@ -478,10 +502,23 @@
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
+                <&macro_press &mo 5>,
                 <&macro_press &kp LALT>,
                 <&macro_pause_for_release>,
                 <&macro_release &kp LALT>,
-                <&macro_tap &to 0>;
+                <&macro_release &mo 5>;
+        };
+        macro_altnavlayer: macro_altnavlayer {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &mo 5>,
+                <&macro_press &kp LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LCTRL>,
+                <&macro_release &mo 5>;
         };
         macro_backtick: macro_backtick {
             compatible = "zmk,behavior-macro";
@@ -500,17 +537,6 @@
                 <&macro_tap &kp RIGHT_BRACKET>,
                 <&macro_release &kp RSHIFT>,
                 <&macro_tap &kp SPACE>;
-        };
-        macro_ctrlnavlayer: macro_ctrlnavlayer {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LCTRL>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp LCTRL>,
-                <&macro_tap &to 0>;
         };
         macro_degree: macro_degree {
             compatible = "zmk,behavior-macro";
@@ -853,10 +879,10 @@
         L5 {
             label = "NAV";
             bindings = <
-&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
-&none  &none  &macro_ctrlnavlayer  &macro_altnavlayer  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none
-&none  &none  &none                &none               &none        &none    &none  &none  &none  &none  &none  &none
-                                   &none               &none        &none    &none  &none  &none
+&none  &none  &none               &none               &none        &none    &none  &none  &none  &none  &none  &none
+&none  &none  &macro_altnavlayer  &macro_altnavlayer  &macro_stab  &kp TAB  &none  &none  &none  &none  &none  &none
+&none  &none  &none               &none               &none        &none    &none  &none  &none  &none  &none  &none
+                                  &none               &none        &none    &none  &none  &none
             >;
         };
     };
