@@ -133,6 +133,14 @@
                 <&macro_tap &kp TAB>,
                 <&macro_release &kp LSHIFT>;
         };
+        macro_str_cvk: macro_str_cvk {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LS(A) &kp S &kp E &kp T &kp E &kp T &kp T &kp U &kp SPACE &kp N1 &kp N6 &kp SPACE &kp C &kp M &kp SPACE &kp N2 &kp KP_MINUS &kp L &kp U &kp M &kp E &kp N &kp SPACE &kp LS(C) &kp LS(V) &kp LS(K) &kp SPACE &kp O &kp I &kp K &kp E &kp A &kp L &kp T &kp A &kp SPACE &kp V &kp PERIOD &kp SPACE &kp J &kp U &kp G &kp U &kp L &kp A &kp R &kp I &kp S &kp SPACE &kp I &kp N &kp T &kp E &kp R &kp N &kp A &kp A &kp N &kp PERIOD &kp SPACE &kp LS(T) &kp M &kp P &kp PERIOD &kp SPACE &kp S &kp T &kp E &kp R &kp I &kp I &kp L &kp I &kp S &kp T &kp I &kp COMMA &kp SPACE &kp LS(U) &kp LS(Ä) &kp LS(PERIOD) &kp T &kp SINGLE_QUOTE &kp SPACE &kp K &kp SINGLE_QUOTE &kp Y &kp T &kp T &kp SINGLE_QUOTE &kp E &kp N &kp PERIOD &kp SPACE &kp LS(E) &kp I &kp SPACE &kp E &kp P &kp SINGLE_QUOTE &kp I &kp L &kp Y &kp SINGLE_QUOTE &kp SPACE &kp K &kp O &kp M &kp P &kp L &kp I &kp K &kp A &kp A &kp T &kp I &kp O &kp S &kp T &kp A &kp PERIOD &kp SPACE &kp LS(T) &kp LS(H) &kp LS(X) &kp SPACE &kp O &kp K &kp COMMA &kp SPACE &kp S &kp A &kp A &kp SPACE &kp K &kp SINGLE_QUOTE &kp Y &kp T &kp T &kp SINGLE_QUOTE &kp SINGLE_QUOTE &kp PERIOD>;
+        };
         macro_str_neuro: macro_str_neuro {
             compatible = "zmk,behavior-macro";
             wait-ms = <10>;
@@ -451,10 +459,10 @@
         L4 {
             label = "MED";
             bindings = <
-&none  &none  &none  &none  &none  &none           &none  &none             &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none           &none  &macro_str_neuro  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &macro_str_vti  &none  &none             &none  &none  &none  &none
-                     &none  &none  &none           &none  &none             &none
+&none  &none  &none  &none           &none  &none           &none  &none             &none  &none  &none  &none
+&none  &none  &none  &none           &none  &none           &none  &macro_str_neuro  &none  &none  &none  &none
+&none  &none  &none  &macro_str_cvk  &none  &macro_str_vti  &none  &none             &none  &none  &none  &none
+                     &none           &none  &none           &none  &none             &none
             >;
         };
         L5 {
