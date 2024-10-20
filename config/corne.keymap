@@ -147,7 +147,7 @@
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A)>;
+                <&macro_tap &kp LS(A) &kp S &kp E &kp T &kp E &kp T &kp T &kp U &kp SPACE &kp N1 &kp N6 &kp SPACE &kp C &kp M &kp SPACE &kp N2 &kp KP_MINUS &kp L &kp U &kp M &kp E &kp N &kp SPACE &kp LS(C) &kp LS(V) &kp LS(K) &kp SPACE &kp O &kp I &kp K &kp E &kp A &kp L &kp T &kp A &kp SPACE &kp V &kp PERIOD &kp SPACE &kp J &kp U &kp G &kp U &kp L &kp A &kp R &kp I &kp S &kp SPACE &kp I &kp N &kp T &kp E &kp R &kp N &kp A &kp A &kp N &kp PERIOD>;
         };
         macro_str_vti: macro_str_vti {
             compatible = "zmk,behavior-macro";
