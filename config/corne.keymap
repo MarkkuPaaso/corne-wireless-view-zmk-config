@@ -103,6 +103,14 @@
                 <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>,
                 <&macro_release &kp LALT>;
         };
+        macro_emdash: macro_emdash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>,
+                <&macro_release &kp LALT>;
+        };
         macro_greater_or_equal: macro_greater_or_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -200,18 +208,6 @@
             bindings = <&macro_altctrllayer>;
             layers = <0>;
         };
-        combo_dquote {
-            timeout-ms = <20>;
-            key-positions = <2 3 4>;
-            bindings = <&kp LS(N2)>;
-            layers = <0>;
-        };
-        combo_squote {
-            timeout-ms = <20>;
-            key-positions = <3 4>;
-            bindings = <&kp BSLH>;
-            layers = <0>;
-        };
         combo_btick {
             timeout-ms = <20>;
             key-positions = <4 5>;
@@ -222,6 +218,12 @@
             timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&macro_tilde>;
+            layers = <0>;
+        };
+        combo_emdash {
+            timeout-ms = <20>;
+            key-positions = <6 7 8>;
+            bindings = <&macro_emdash>;
             layers = <0>;
         };
         combo_dash {
@@ -276,6 +278,18 @@
             timeout-ms = <20>;
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+        combo_dquote {
+            timeout-ms = <20>;
+            key-positions = <19 20 21>;
+            bindings = <&kp LS(N2)>;
+            layers = <0>;
+        };
+        combo_squote {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&kp BSLH>;
             layers = <0>;
         };
         combo_oe {
