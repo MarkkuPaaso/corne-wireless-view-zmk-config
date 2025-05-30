@@ -178,21 +178,27 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_capslock {
             timeout-ms = <20>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            layers = <0 1 2>;
+            key-positions = <13 22>;
+            bindings = <&kp CAPSLOCK>;
+            layers = <0>;
+        };
+        combo_insert {
+            timeout-ms = <20>;
+            key-positions = <25 34>;
+            bindings = <&kp INSERT>;
+            layers = <0>;
         };
         combo_emark {
             timeout-ms = <20>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&kp EXCLAMATION>;
             layers = <0>;
         };
         combo_atsign {
             timeout-ms = <20>;
-            key-positions = <3 4>;
+            key-positions = <2 3>;
             bindings = <&kp RA(N2)>;
             layers = <0>;
         };
@@ -244,11 +250,11 @@
             bindings = <&kp SINGLE_QUOTE>;
             layers = <0>;
         };
-        combo_capslock {
+        combo_esc {
             timeout-ms = <20>;
-            key-positions = <13 15>;
-            bindings = <&kp CAPSLOCK>;
-            layers = <0>;
+            key-positions = <13 14 15>;
+            bindings = <&kp ESC>;
+            layers = <0 1 2>;
         };
         combo_stab {
             timeout-ms = <20>;
@@ -310,12 +316,6 @@
             bindings = <&kp LGUI>;
             layers = <0 1 2>;
         };
-        combo_insert {
-            timeout-ms = <20>;
-            key-positions = <25 27>;
-            bindings = <&kp INSERT>;
-            layers = <0>;
-        };
         combo_percent {
             timeout-ms = <20>;
             key-positions = <26 27>;
@@ -374,12 +374,6 @@
             timeout-ms = <80>;
             key-positions = <6 7>;
             bindings = <&macro_greater_or_equal>;
-            layers = <1>;
-        };
-        combo_pound {
-            timeout-ms = <80>;
-            key-positions = <26 27 28>;
-            bindings = <&kp RA(N3)>;
             layers = <1>;
         };
         combo_euro {
@@ -455,10 +449,10 @@
         L2 {
             label = "Nav";
             bindings = <
-&none  &kp GRAVE   &none      &kp LS(N3)      &kp RA(N4)  &kp RA(E)  &macro_circumflex  &none     &kp PG_DN  &kp PG_UP  &kp BACKSPACE  &none
-&none  &kp LSHIFT  &kp LCTRL  &kp LALT        &kp TAB     &none      &none              &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT      &none
-&none  &none       &none      &macro_comment  &none       &none      &none              &none     &none      &none      &none          &none
-                              &none           &mo 1       &none      &none              &none     &none    
+&none  &kp GRAVE   &none      &kp LS(N3)      &kp RA(N4)  &kp RA(E)  &macro_circumflex  &none     &none     &none   &kp BACKSPACE  &none
+&none  &kp LSHIFT  &kp LCTRL  &kp LALT        &kp TAB     &none      &none              &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT      &none
+&none  &none       &none      &macro_comment  &none       &none      &none              &none     &none     &none   &none          &none
+                              &none           &mo 1       &none      &none              &none     &none   
             >;
         };
         L3 {
